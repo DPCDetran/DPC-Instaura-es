@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<title>DHC | Capacidade Operacional e Instauração — DETRAN-SP</title>
+<style>
+
+:root{
+  --azul:#005CA8;
+  --azul2:#3490CE;
+  --azul3:#004077;
+  --fundo:#EEF4F8;
+  --branco:#FFFFFF;
+  --texto:#17324A;
+  --muted:#6B7F90;
+  --borda:#DCE7EF;
+  --vermelho:#C83D3D;
+  --verde:#31845D;
+  --amarelo:#C88B1C;
+  --shadow:0 10px 28px rgba(0,64,119,.07);
+  --shadow2:0 18px 42px rgba(0,64,119,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--fundo);
+  color:var(--texto);
+  font-family:"Segoe UI",Arial,sans-serif;
+  line-height:1.55;
+}
+.shell{
+  max-width:1600px;
+  margin:0 auto;
+  min-height:100vh;
+  background:#F8FBFD;
+  box-shadow:0 0 55px rgba(0,64,119,.06);
+}
+
+/* CABEÇALHO - mantém a identidade do primeiro */
+.topbar{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,#004077 0%,#005CA8 68%,#147FC0 100%);
+  color:#fff;
+  padding:8px 34px 0;
+  box-shadow:0 12px 28px rgba(0,64,119,.18);
+}
+.topbar:before{
+  content:"";
+  position:absolute;
+  width:280px;height:280px;
+  right:-110px;top:-170px;
+  border-radius:50%;
+  background:rgba(255,255,255,.06);
+}
+.topbar:after{
+  content:"";
+  position:absolute;
+  width:190px;height:190px;
+  left:-80px;bottom:-125px;
+  border-radius:50%;
+  background:rgba(52,144,206,.12);
+}
+.header{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:250px minmax(0,1fr) 250px;
+  min-height:72px;
+  align-items:center;
+}
+.header>div:first-child{
+  display:flex;
+  align-items:center;
+}
+.logo{
+  width:205px;
+  max-height:58px;
+  object-fit:contain;
+  display:block;
+  filter:drop-shadow(0 5px 10px rgba(0,0,0,.16));
+}
+.title{text-align:center}
+.title h1{
+  margin:0;
+  font-size:27px;
+  line-height:1.05;
+  font-weight:850;
+  letter-spacing:-.55px;
+}
+.title p{
+  margin:5px 0 0;
+  font-size:11px;
+  color:#D8EDF9;
+}
+.update{
+  justify-self:end;
+  text-align:right;
+  font-size:10px;
+  line-height:1.45;
+  font-weight:800;
+  color:#D8EDF9;
+}
+.menu{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:4px;
+  overflow:auto;
+  scrollbar-width:none;
+}
+.menu::-webkit-scrollbar{display:none}
+.menu a{
+  flex:0 0 auto;
+  color:#EAF7FD;
+  text-decoration:none;
+  font-size:10.5px;
+  font-weight:800;
+  padding:10px 13px 11px;
+  border-radius:8px 8px 0 0;
+  transition:.2s ease;
+}
+.menu a:hover,.menu a.active{
+  background:rgba(255,255,255,.12);
+  color:#fff;
+}
+
+/* CONTEÚDO - mesma linguagem, organização melhor */
+main{
+  width:1320px;
+  max-width:calc(100% - 64px);
+  margin:0 auto;
+  padding:52px 0 84px;
+}
+.section{
+  margin:0 0 42px;
+  padding:34px 36px 38px;
+  background:#fff;
+  border:1px solid #E1EAF1;
+  border-radius:22px;
+  box-shadow:var(--shadow);
+  scroll-margin-top:95px;
+}
+.section:last-child{margin-bottom:0}
+.section-head{
+  display:grid;
+  grid-template-columns:48px minmax(0,1fr) auto;
+  gap:16px;
+  align-items:center;
+  margin-bottom:26px;
+  padding-bottom:20px;
+  border-bottom:1px solid var(--borda);
+}
+.section-head>div{min-width:0}
+.num{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+  background:#EAF5FB;
+  border:1px solid #D2E8F4;
+  color:var(--azul);
+  font-weight:900;
+  font-size:11px;
+}
+.section-head h2{
+  margin:0;
+  color:#073F69;
+  font-size:24px;
+  line-height:1.15;
+  letter-spacing:-.35px;
+}
+.section-head p{
+  margin:6px 0 0;
+  max-width:900px;
+  color:var(--muted);
+  font-size:12.5px;
+}
+.tag{
+  align-self:center;
+  padding:6px 10px;
+  border-radius:999px;
+  background:#F0F7FB;
+  border:1px solid #D8E9F3;
+  color:#37769D;
+  font-size:8.5px;
+  font-weight:900;
+  letter-spacing:.85px;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+/* GRIDS */
+.grid{display:grid;gap:16px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+
+/* KPIs - próximos do primeiro, mas com hierarquia consistente */
+.kpi{
+  min-height:132px;
+  padding:21px 20px;
+  border:1px solid var(--borda);
+  border-radius:16px;
+  background:#fff;
+  box-shadow:none;
+  position:relative;
+  overflow:hidden;
+  transition:.18s ease;
+}
+.kpi:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow);
+}
+.kpi:before{
+  content:"";
+  position:absolute;
+  left:0;top:0;bottom:0;
+  width:4px;
+  background:var(--azul2);
+}
+.kpi .n{
+  font-size:34px;
+  line-height:1;
+  font-weight:850;
+  letter-spacing:-1px;
+  color:var(--azul);
+}
+.kpi .l{
+  margin-top:10px;
+  color:#6D8293;
+  font-size:10px;
+  line-height:1.4;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.65px;
+}
+.kpi.accent{
+  background:linear-gradient(135deg,#004077,#005CA8);
+  border-color:transparent;
+}
+.kpi.accent:before{background:#7FD3F1}
+.kpi.accent .n,.kpi.accent .l{color:#fff}
+.kpi.danger:before{background:var(--vermelho)}
+.kpi.warn:before{background:var(--amarelo)}
+
+/* BLOCOS DE TEXTO */
+.banner,.info,.formula,.alert{
+  margin-top:20px;
+  border-radius:14px;
+  padding:18px 20px;
+  font-size:12.5px;
+  line-height:1.65;
+}
+.banner{
+  background:#F0F8FC;
+  border:1px solid #D7EAF4;
+  border-left:5px solid var(--azul);
+  color:#2E5874;
+}
+.banner strong{color:#004A7B}
+.info{
+  background:#F8FBFD;
+  border:1px solid var(--borda);
+  color:#536E80;
+}
+.formula{
+  background:#F4FAFD;
+  border:1px solid #D6E9F3;
+  border-left:5px solid var(--azul2);
+}
+.alert{
+  background:#FFF7F7;
+  border:1px solid #EED5D5;
+  border-left:5px solid var(--vermelho);
+}
+
+/* GRÁFICO DE QUEDA / CARDS MENSAIS */
+.months{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+  margin-top:20px;
+}
+.month-card{
+  min-height:108px;
+  padding:18px 16px;
+  border:1px solid var(--borda);
+  border-radius:14px;
+  background:#fff;
+  text-align:left;
+}
+.month-card span{
+  display:block;
+  color:#8092A1;
+  font-size:9px;
+  font-weight:850;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+.month-card strong{
+  display:block;
+  margin-top:6px;
+  color:#004A7B;
+  font-size:28px;
+  letter-spacing:-.6px;
+}
+.month-card small{
+  display:block;
+  margin-top:4px;
+  color:#91A1AE;
+  font-size:9.5px;
+}
+.month-card.decline{
+  background:#FFF9F9;
+  border-color:#EED8D8;
+}
+.month-card.decline strong{color:var(--vermelho)}
+.reductions{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-top:14px;
+}
+.reduction{
+  padding:15px 16px;
+  min-height:82px;
+  border-radius:14px;
+  border:1px solid var(--borda);
+  background:#F8FBFD;
+}
+.reduction b{
+  display:block;
+  color:#004A7B;
+  font-size:22px;
+}
+.reduction small{
+  display:block;
+  margin-top:4px;
+  color:#718697;
+  font-size:10px;
+  line-height:1.45;
+}
+
+/* CARDS GENÉRICOS */
+.card{
+  border:1px solid var(--borda);
+  border-radius:16px;
+  background:#fff;
+  padding:20px;
+  box-shadow:none;
+}
+.card h3{
+  margin:0 0 12px;
+  font-size:15px;
+  color:#073F69;
+}
+.card p{
+  margin:7px 0 0;
+  color:#667D8F;
+  font-size:12px;
+}
+
+/* TABELAS */
+.table-wrap{
+  overflow:auto;
+  border:1px solid var(--borda);
+  border-radius:14px;
+  background:#fff;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:12px;
+}
+thead th{
+  background:#064B7D;
+  color:#fff;
+  padding:11px 12px;
+  font-size:9px;
+  font-weight:850;
+  text-transform:uppercase;
+  letter-spacing:.45px;
+  text-align:right;
+}
+thead th:first-child,tbody td:first-child{text-align:left}
+tbody td{
+  padding:11px 12px;
+  border-top:1px solid #EAF0F4;
+  text-align:right;
+  color:#496577;
+}
+tbody tr:nth-child(even){background:#FAFCFD}
+tbody tr:hover{background:#F0F8FC}
+
+/* BARRAS */
+.bar-row{
+  display:grid;
+  grid-template-columns:74px 1fr 82px;
+  gap:11px;
+  align-items:center;
+  padding:9px 0;
+}
+.lbl,.val{
+  color:#61798A;
+  font-size:10px;
+  font-weight:800;
+}
+.val{text-align:right;color:#004A7B}
+.track{
+  height:10px;
+  overflow:hidden;
+  border-radius:999px;
+  background:#E7EEF3;
+}
+.fill{
+  height:100%;
+  border-radius:999px;
+  background:linear-gradient(90deg,#005CA8,#3490CE);
+  transition:width .9s ease;
+}
+
+/* CAPACIDADE */
+.capacity{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+.cap{
+  min-height:126px;
+  padding:21px 18px;
+  border:1px solid var(--borda);
+  border-radius:16px;
+  background:#fff;
+}
+.cap strong{
+  display:block;
+  color:var(--azul);
+  font-size:31px;
+  line-height:1;
+  letter-spacing:-.7px;
+}
+.cap span{
+  display:block;
+  margin-top:9px;
+  color:#6A8091;
+  font-size:10.5px;
+  line-height:1.45;
+  font-weight:750;
+}
+.cap.primary{
+  background:#064B7D;
+  border-color:#064B7D;
+}
+.cap.primary strong,.cap.primary span{color:#fff}
+
+/* TIMELINE - organizada e compacta */
+.timeline{
+  position:relative;
+  padding-left:32px;
+}
+.timeline:before{
+  content:"";
+  position:absolute;
+  left:7px;
+  top:12px;
+  bottom:12px;
+  width:2px;
+  background:#D6E6F0;
+}
+.tl-card{
+  position:relative;
+  margin-bottom:14px;
+}
+.tl-card:last-child{margin-bottom:0}
+.tl-marker{
+  position:absolute;
+  left:-31px;
+  top:19px;
+  width:14px;height:14px;
+  border-radius:50%;
+  background:var(--azul2);
+  border:3px solid #F8FBFD;
+  box-shadow:0 0 0 2px var(--azul2);
+}
+.tl-marker.red{background:var(--vermelho);box-shadow:0 0 0 2px var(--vermelho)}
+.tl-marker.green{background:var(--verde);box-shadow:0 0 0 2px var(--verde)}
+.tl-marker.yellow{background:var(--amarelo);box-shadow:0 0 0 2px var(--amarelo)}
+.tl-content{
+  padding:16px 18px;
+  border:1px solid var(--borda);
+  border-radius:14px;
+  background:#fff;
+}
+.tl-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+}
+.tl-date{
+  color:#005CA8;
+  font-size:9.5px;
+  font-weight:900;
+}
+.tl-content h3{
+  margin:6px 0 0;
+  color:#144968;
+  font-size:13.5px;
+}
+.tl-content p,.tl-content li{
+  color:#647B8C;
+  font-size:11.2px;
+  line-height:1.65;
+}
+.tl-content p{margin:8px 0 0}
+.tl-content ul{margin:8px 0 0;padding-left:18px}
+.tl-tag{
+  padding:4px 7px;
+  border-radius:999px;
+  font-size:7.8px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.4px;
+}
+.tl-tag.alert{background:#FFF0F0;color:var(--vermelho)}
+.tl-tag.meeting{background:#EAF5FB;color:#005CA8}
+.tl-tag.fix{background:#FFF6DA;color:#9B6900}
+.tl-tag.resolved{background:#EBF9F1;color:var(--verde)}
+
+/* CONCLUSÃO */
+.conclusion{
+  padding:26px 28px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#004077,#005CA8);
+  color:#fff;
+}
+.conclusion h3{
+  margin:0 0 9px;
+  font-size:22px;
+}
+.conclusion p{
+  margin:0;
+  max-width:1100px;
+  color:#D7EDF8;
+  font-size:12.5px;
+  line-height:1.65;
+}
+
+/* ANIMAÇÕES DISCRETAS */
+.reveal{
+  opacity:0;
+  transform:translateY(12px);
+  transition:opacity .45s ease,transform .45s ease;
+  transition-delay:var(--delay,0ms);
+}
+.reveal.visible{
+  opacity:1;
+  transform:none;
+}
+.back-top{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  width:42px;height:42px;
+  border:0;
+  border-radius:12px;
+  background:#005CA8;
+  color:#fff;
+  box-shadow:0 10px 24px rgba(0,64,119,.18);
+  cursor:pointer;
+  opacity:0;
+  pointer-events:none;
+  transition:.2s;
+}
+.back-top.show{opacity:1;pointer-events:auto}
+.footer{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:16px 34px;
+  background:#004077;
+  color:#CFE6F2;
+  font-size:9.5px;
+}
+
+@media(max-width:1050px){
+  .header{grid-template-columns:190px minmax(0,1fr) 180px}
+  .logo{width:170px}
+  .title h1{font-size:22px}
+  main{max-width:calc(100% - 36px)}
+  .g4,.months,.capacity{grid-template-columns:repeat(2,1fr)}
+  .g3,.reductions{grid-template-columns:1fr 1fr}
+  .g2{grid-template-columns:1fr}
+  .section-head{grid-template-columns:44px minmax(0,1fr)}
+  .tag{grid-column:2;justify-self:start}
+}
+@media(max-width:700px){
+  .topbar{padding:8px 14px 0}
+  .header{grid-template-columns:1fr;gap:6px;padding:8px 0 6px}
+  .header>div:first-child{justify-content:center}
+  .update{justify-self:center;text-align:center}
+  .menu{justify-content:flex-start}
+  main{max-width:calc(100% - 24px);padding-top:26px}
+  .section{padding:24px 18px;margin-bottom:24px;border-radius:16px}
+  .section-head{grid-template-columns:42px minmax(0,1fr);gap:11px}
+  .section-head h2{font-size:20px}
+  .g4,.g3,.months,.reductions,.capacity{grid-template-columns:1fr}
+  .footer{flex-direction:column}
+}
+
+
+/* ===== CORREÇÃO DE LAYOUT DOS CABEÇALHOS DAS SEÇÕES ===== */
+.section-head{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) auto !important;
+  gap:22px !important;
+  align-items:center !important;
+  margin-bottom:26px !important;
+  padding-bottom:20px !important;
+  border-bottom:1px solid var(--borda) !important;
+}
+
+.section-head > div{
+  display:grid !important;
+  grid-template-columns:48px minmax(0,1fr) !important;
+  grid-template-rows:auto auto !important;
+  column-gap:16px !important;
+  row-gap:4px !important;
+  align-items:center !important;
+  min-width:0 !important;
+}
+
+.section-head > div > .num{
+  grid-column:1 !important;
+  grid-row:1 / span 2 !important;
+  width:48px !important;
+  height:48px !important;
+  margin:0 !important;
+  align-self:start !important;
+}
+
+.section-head > div > h2{
+  grid-column:2 !important;
+  grid-row:1 !important;
+  margin:0 !important;
+  min-width:0 !important;
+  max-width:none !important;
+  white-space:normal !important;
+  word-break:normal !important;
+  overflow-wrap:normal !important;
+}
+
+.section-head > div > p{
+  grid-column:2 !important;
+  grid-row:2 !important;
+  margin:5px 0 0 !important;
+  max-width:900px !important;
+  min-width:0 !important;
+  white-space:normal !important;
+  word-break:normal !important;
+  overflow-wrap:normal !important;
+}
+
+.section-head > .tag{
+  grid-column:2 !important;
+  grid-row:1 !important;
+  justify-self:end !important;
+  align-self:center !important;
+  width:auto !important;
+  max-width:220px !important;
+  white-space:nowrap !important;
+}
+
+/* Evita qualquer herança antiga que estreite o texto */
+.section-head h2,
+.section-head p{
+  width:auto !important;
+}
+
+/* Melhor organização dos blocos de duas colunas */
+.grid.g2{
+  grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr) !important;
+  align-items:start !important;
+}
+
+.table-wrap,
+.card{
+  min-width:0 !important;
+}
+
+/* Responsividade corrigida */
+@media(max-width:1050px){
+  .section-head{
+    grid-template-columns:minmax(0,1fr) !important;
+    gap:12px !important;
+  }
+  .section-head > .tag{
+    grid-column:1 !important;
+    grid-row:2 !important;
+    justify-self:start !important;
+    margin-left:64px !important;
+  }
+  .grid.g2{
+    grid-template-columns:1fr !important;
+  }
+}
+
+@media(max-width:700px){
+  .section-head > div{
+    grid-template-columns:42px minmax(0,1fr) !important;
+    column-gap:11px !important;
+  }
+  .section-head > div > .num{
+    width:42px !important;
+    height:42px !important;
+  }
+  .section-head > .tag{
+    margin-left:53px !important;
+  }
+}
+
+
+/* ===== REMOÇÃO DOS GRÁFICOS REDUNDANTES ===== */
+.grid.g2:has(.table-wrap):not(:has(.card)){
+  grid-template-columns:1fr !important;
+}
+
+.section .table-wrap{
+  width:100% !important;
+}
+
+/* Quando só restar a tabela dentro de um grid, ela ocupa toda a largura */
+.grid.g2 > .table-wrap:only-child{
+  grid-column:1 / -1 !important;
+}
+
+
+/* ===== AJUSTE FINAL: SEM GRÁFICOS REDUNDANTES ===== */
+.grid.g2{
+  grid-template-columns:1fr !important;
+}
+.grid.g2 > .table-wrap,
+.grid.g2 > table,
+.section .table-wrap{
+  width:100% !important;
+  grid-column:1 / -1 !important;
+}
+.bar-row,.track > .fill{
+  /* gráficos mensais redundantes removidos do HTML */
+}
+
+/* ===== CAPACIDADE COMO FLUXO, NÃO COMO CARDS ===== */
+.capacity-flow{
+  margin-top:6px;
+  padding:30px 30px 26px;
+  border:1px solid #D8E6EF;
+  border-radius:18px;
+  background:
+    linear-gradient(180deg,#FBFDFE 0%,#F4F9FC 100%);
+  overflow:hidden;
+}
+.capacity-flow-title{
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  align-items:flex-end;
+  padding-bottom:22px;
+  border-bottom:1px solid #DCE7EF;
+}
+.capacity-flow-title span{
+  color:#6D8799;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:1.2px;
+}
+.capacity-flow-title strong{
+  color:#064B7D;
+  font-size:19px;
+  letter-spacing:-.2px;
+}
+.capacity-path{
+  display:grid;
+  grid-template-columns:1fr 42px 1fr 48px 1.12fr 48px 1.18fr;
+  align-items:center;
+  gap:10px;
+  padding:34px 0 30px;
+}
+.capacity-node{
+  min-width:0;
+  text-align:center;
+}
+.node-label{
+  color:#698294;
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+.node-value{
+  margin-top:7px;
+  color:#005CA8;
+  font-size:42px;
+  line-height:1;
+  font-weight:900;
+  letter-spacing:-1.5px;
+}
+.node-desc{
+  margin-top:8px;
+  color:#6A8191;
+  font-size:10px;
+  line-height:1.45;
+}
+.capacity-or{
+  color:#8BA0AF;
+  font-size:10px;
+  font-weight:900;
+  text-transform:uppercase;
+  text-align:center;
+}
+.capacity-arrow{
+  position:relative;
+  color:#3490CE;
+  font-size:29px;
+  font-weight:300;
+  text-align:center;
+}
+.capacity-node.week,
+.capacity-node.month{
+  padding-left:18px;
+  border-left:1px solid #D8E6EF;
+}
+.team-equation{
+  display:grid;
+  grid-template-columns:1fr 50px 1.25fr 50px 1.65fr;
+  align-items:center;
+  gap:12px;
+  padding:22px 24px;
+  border-radius:14px;
+  background:#064B7D;
+  color:#fff;
+}
+.team-part{
+  text-align:center;
+}
+.team-part span,.team-result span{
+  display:block;
+  color:#B9DCEB;
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:.9px;
+  text-transform:uppercase;
+}
+.team-part strong{
+  display:block;
+  margin-top:4px;
+  font-size:31px;
+  line-height:1;
+}
+.team-part small,.team-result small{
+  display:block;
+  margin-top:5px;
+  color:#D3EAF4;
+  font-size:9px;
+}
+.team-symbol{
+  color:#7ECBEA;
+  font-size:28px;
+  font-weight:300;
+  text-align:center;
+}
+.team-result{
+  padding-left:22px;
+  border-left:1px solid rgba(255,255,255,.2);
+  text-align:left;
+}
+.team-result strong{
+  display:block;
+  margin-top:3px;
+  color:#fff;
+  font-size:42px;
+  line-height:1;
+  letter-spacing:-1.5px;
+}
+.weekly-band{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  gap:20px;
+  align-items:center;
+  margin-top:14px;
+  padding:13px 16px;
+  border-top:1px solid #DCE7EF;
+  color:#6B8293;
+  font-size:10px;
+}
+.weekly-band span{
+  font-weight:800;
+}
+.weekly-band b{
+  color:#005CA8;
+  font-size:16px;
+}
+.weekly-band i{
+  justify-self:end;
+  font-style:normal;
+  color:#8295A3;
+  font-size:9px;
+}
+
+@media(max-width:1050px){
+  .capacity-path{
+    grid-template-columns:1fr 36px 1fr;
+  }
+  .capacity-path .capacity-arrow{
+    display:none;
+  }
+  .capacity-node.week,
+  .capacity-node.month{
+    border-left:0;
+    border-top:1px solid #D8E6EF;
+    padding:20px 0 0;
+  }
+  .capacity-node.week{grid-column:1}
+  .capacity-node.month{grid-column:3}
+  .team-equation{
+    grid-template-columns:1fr 36px 1fr;
+  }
+  .team-equation .team-result{
+    grid-column:1 / -1;
+    border-left:0;
+    border-top:1px solid rgba(255,255,255,.2);
+    padding:18px 0 0;
+    text-align:center;
+  }
+}
+@media(max-width:700px){
+  .capacity-flow{padding:22px 18px}
+  .capacity-flow-title{display:block}
+  .capacity-flow-title strong{display:block;margin-top:5px}
+  .capacity-path{grid-template-columns:1fr}
+  .capacity-or{padding:2px 0}
+  .capacity-node.week,.capacity-node.month{grid-column:auto}
+  .team-equation{grid-template-columns:1fr}
+  .team-symbol{font-size:20px}
+  .weekly-band{grid-template-columns:1fr;text-align:center}
+  .weekly-band i{justify-self:center}
+}
+
+
+/* ===== SEÇÕES 04/05/06 RECONSTRUÍDAS ===== */
+#instaurados .table-wrap,
+#defesas .table-wrap{
+  width:100% !important;
+}
+
+#defesas .defense-summary{
+  grid-template-columns:minmax(0,1.45fr) minmax(280px,.55fr) !important;
+  gap:24px !important;
+  align-items:stretch !important;
+}
+
+.defense-insights{
+  padding:22px 24px;
+  border:1px solid var(--borda);
+  border-radius:14px;
+  background:linear-gradient(180deg,#F8FBFD,#F2F7FA);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.defense-number span{
+  display:block;
+  color:#73899A;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+}
+
+.defense-number strong{
+  display:block;
+  margin-top:5px;
+  color:#005CA8;
+  font-size:36px;
+  line-height:1;
+  letter-spacing:-1px;
+}
+
+.defense-divider{
+  height:1px;
+  background:#DCE7EF;
+  margin:20px 0;
+}
+
+.defense-insights p{
+  margin:20px 0 0;
+  padding-top:16px;
+  border-top:1px solid #DCE7EF;
+  color:#6A8091;
+  font-size:10.5px;
+  line-height:1.6;
+}
+
+/* mata qualquer fragmento antigo que porventura tenha sobrado */
+#instaurados .track,
+#instaurados .val,
+#instaurados .bar-row,
+#defesas .track,
+#defesas .val,
+#defesas .bar-row,
+#defesas .card{
+  display:none !important;
+}
+
+@media(max-width:1050px){
+  #defesas .defense-summary{
+    grid-template-columns:1fr !important;
+  }
+}
+
+
+/* ===== AJUSTE SOLICITADO: INDICADORES DE DEFESA LADO A LADO ===== */
+#defesas .defense-summary{
+  grid-template-columns:1fr !important;
+  gap:18px !important;
+}
+.defense-insights.defense-inline{
+  display:grid !important;
+  grid-template-columns:1fr 1fr !important;
+  gap:0 !important;
+  padding:0 !important;
+  background:#F5F9FC !important;
+  overflow:hidden;
+}
+.defense-inline .defense-number{
+  padding:22px 28px !important;
+  min-height:118px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.defense-inline .defense-number + .defense-number{
+  border-left:1px solid #D7E5EE;
+}
+.defense-inline .defense-number span{
+  font-size:9px !important;
+  letter-spacing:.9px;
+}
+.defense-inline .defense-number strong{
+  margin-top:7px !important;
+  font-size:38px !important;
+}
+
+/* ===== NOVA CAPACIDADE ===== */
+.capacity-new{
+  border:1px solid #D8E6EF;
+  border-radius:18px;
+  overflow:hidden;
+  background:linear-gradient(180deg,#FBFDFE,#F3F8FB);
+}
+.capacity-mainline{
+  display:grid;
+  grid-template-columns:1fr 46px 1.05fr 46px .8fr 46px 1.35fr;
+  align-items:stretch;
+}
+.capacity-stat,
+.capacity-total{
+  min-height:160px;
+  padding:28px 22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.capacity-stat{
+  text-align:center;
+}
+.capacity-stat span,
+.capacity-total span{
+  color:#6C8394;
+  font-size:8.5px;
+  font-weight:900;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+.capacity-stat strong{
+  margin-top:7px;
+  color:#005CA8;
+  font-size:42px;
+  line-height:1;
+  letter-spacing:-1.4px;
+}
+.capacity-stat small,
+.capacity-total small{
+  margin-top:7px;
+  color:#7A8F9E;
+  font-size:9.5px;
+}
+.capacity-connector{
+  display:grid;
+  place-items:center;
+  color:#75A9C9;
+  font-size:27px;
+  border-left:1px solid #E1EBF1;
+  border-right:1px solid #E1EBF1;
+}
+.capacity-total{
+  background:linear-gradient(135deg,#004077,#005CA8);
+}
+.capacity-total span,
+.capacity-total small{
+  color:#CDE7F4;
+}
+.capacity-total strong{
+  margin-top:6px;
+  color:#fff;
+  font-size:43px;
+  line-height:1;
+  letter-spacing:-1.5px;
+}
+
+@media(max-width:900px){
+  .capacity-mainline{
+    grid-template-columns:1fr;
+  }
+  .capacity-connector{
+    min-height:38px;
+    border:0;
+    border-top:1px solid #E1EBF1;
+    border-bottom:1px solid #E1EBF1;
+  }
+}
+@media(max-width:650px){
+  .defense-insights.defense-inline{
+    grid-template-columns:1fr !important;
+  }
+  .defense-inline .defense-number + .defense-number{
+    border-left:0;
+    border-top:1px solid #D7E5EE;
+  }
+}
+
+
+/* ===== ESTOQUE POTENCIAL VS CAPACIDADE — NOVO FORMATO APROVADO ===== */
+.stock-flow{
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) 54px minmax(0,1fr) 54px minmax(0,1.05fr);
+  align-items:center;
+  gap:14px;
+  margin-top:6px;
+}
+
+.stock-item{
+  min-height:186px;
+  padding:28px 28px;
+  border:1px solid #D6E4EE;
+  border-radius:20px;
+  background:#fff;
+  display:grid;
+  grid-template-columns:72px 1fr;
+  gap:20px;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.stock-main{
+  background:linear-gradient(135deg,#0A5DA0,#165FBA);
+  color:#fff;
+  border-color:#0C5FA8;
+  box-shadow:0 16px 34px rgba(0,92,168,.16);
+}
+
+.stock-months{
+  border-left:5px solid #D94A4A;
+}
+
+.stock-icon{
+  width:64px;
+  height:64px;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  font-size:28px;
+  color:#fff;
+  background:rgba(255,255,255,.14);
+}
+
+.stock-icon.light{
+  color:#005CA8;
+  background:#EAF4FB;
+  border:1px solid #D5E7F3;
+}
+
+.stock-item strong{
+  display:block;
+  font-size:44px;
+  line-height:1;
+  letter-spacing:-1.6px;
+  color:#005CA8;
+}
+
+.stock-main strong{
+  color:#fff;
+}
+
+.stock-item span{
+  display:block;
+  margin-top:8px;
+  color:#6B8192;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.8px;
+}
+
+.stock-main span{
+  color:#fff;
+}
+
+.stock-item small{
+  display:block;
+  margin-top:14px;
+  color:#587287;
+  font-size:11px;
+  line-height:1.55;
+}
+
+.stock-main small{
+  color:#fff;
+  font-weight:700;
+}
+
+.stock-arrow{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  justify-self:center;
+  color:#fff;
+  background:#064B7D;
+  font-size:24px;
+  box-shadow:0 8px 18px rgba(0,64,119,.16);
+}
+
+.stock-timeline{
+  display:grid;
+  grid-template-columns:350px 1fr;
+  gap:34px;
+  align-items:center;
+  margin-top:26px;
+  padding:26px 30px;
+  border:1px solid #E9B8B8;
+  border-radius:20px;
+  background:linear-gradient(180deg,#FFFDFD,#FFF8F8);
+}
+
+.timeline-summary{
+  display:grid;
+  grid-template-columns:130px 1fr;
+  gap:22px;
+  align-items:center;
+}
+
+.timeline-ring{
+  width:122px;
+  height:122px;
+  border-radius:50%;
+  background:
+    conic-gradient(#D74646 0deg 270deg,#F3E1E1 270deg 360deg);
+  display:grid;
+  place-items:center;
+}
+
+.timeline-ring:before{
+  content:"";
+  width:92px;
+  height:92px;
+  border-radius:50%;
+  background:#fff;
+  position:absolute;
+}
+
+.timeline-ring{
+  position:relative;
+}
+
+.timeline-ring-inner{
+  position:relative;
+  z-index:2;
+  color:#D74646;
+  font-size:34px;
+}
+
+.timeline-summary span{
+  display:block;
+  color:#143E61;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.8px;
+}
+
+.timeline-summary strong{
+  display:block;
+  margin-top:10px;
+  color:#D74646;
+  font-size:44px;
+  line-height:1;
+  letter-spacing:-1.4px;
+}
+
+.timeline-summary strong small{
+  font-size:18px;
+  letter-spacing:0;
+}
+
+.timeline-scale{
+  min-width:0;
+}
+
+.timeline-label{
+  text-align:right;
+  color:#75899A;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.9px;
+}
+
+.month-track{
+  position:relative;
+  margin-top:14px;
+  height:46px;
+}
+
+.month-cells{
+  display:grid;
+  grid-template-columns:repeat(20,1fr);
+  gap:5px;
+  position:absolute;
+  inset:0;
+}
+
+.month-cells i{
+  border-radius:4px;
+  background:#F2E5E5;
+}
+
+.month-cells i:nth-child(-n+15){
+  background:#D74646;
+}
+
+.timeline-ticks{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  margin-top:6px;
+  color:#7A8E9E;
+  font-size:9px;
+  font-weight:800;
+}
+
+.timeline-ticks span:nth-child(2),
+.timeline-ticks span:nth-child(3),
+.timeline-ticks span:nth-child(4),
+.timeline-ticks span:nth-child(5){
+  text-align:center;
+}
+
+.timeline-ticks .active{
+  color:#D74646;
+  font-weight:900;
+}
+
+.timeline-scale p{
+  margin:20px 0 0;
+  color:#526E82;
+  font-size:11.5px;
+  line-height:1.6;
+}
+
+.timeline-scale p strong{
+  color:#D74646;
+}
+
+.scenario-alert{
+  display:grid;
+  grid-template-columns:48px 1fr;
+  gap:14px;
+  align-items:center;
+  margin-top:22px;
+  padding:16px 18px;
+  border:1px solid #E9D6A8;
+  border-radius:14px;
+  background:#FFF9EC;
+}
+
+.alert-icon{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#D89A1D;
+  color:#fff;
+  font-size:22px;
+  font-weight:900;
+}
+
+.scenario-alert p{
+  margin:0;
+  color:#6C5422;
+  font-size:11.5px;
+  line-height:1.6;
+}
+
+@media(max-width:1100px){
+  .stock-flow{
+    grid-template-columns:1fr;
+  }
+  .stock-arrow{
+    transform:rotate(90deg);
+  }
+  .stock-timeline{
+    grid-template-columns:1fr;
+  }
+  .timeline-summary{
+    max-width:420px;
+  }
+}
+
+@media(max-width:650px){
+  .stock-item{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+  .stock-icon{
+    justify-self:center;
+  }
+  .timeline-summary{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+  .timeline-ring{
+    justify-self:center;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="shell">
+
+<header class="topbar">
+  <div class="header">
+    <div><img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAwoAAADICAYAAABI8BYDAAAQAElEQVR4Aezdi3bbPK6G4ex9//f8T7+kTBVFBx4AEiTfWYPalkUSeCjLRjtrzf9/8B8EEEAAAQQQQAABBBBA4CTw2Sj8x3+aBE6mvERgsADLI4AAAggggAAC7QKfjUL7NHvPcNdl7K1C9QgggAACZgJMhAACCAwQoFFwRL9qIByXY2oEEEAAAQQQQACBSQRmSJNGofMuHZuHzkuzHAIIIIAAAggggAAC2QI0CtlU9icemwY9t1+BGe0FmBEBBBBAAAEEENhDgEYh0D6rWVAESolUEEAAgfUFqBABBBBA4FKARuGSZexBNQspxmbC6ggggAACCCCAwHwCZGwjQKNg4+g2S2oY9Oi2CBMjgAACCCCAAAIIIHASoFE4gUR+qWZBETnHttwYjQACCCCAAAIIIBBFgEYhyk4U5KFmQVEwhFMRQACBMQKsigACCCAwrQCNwrRb9/GhZkExcQmkjgACCCCAAAKTCZDuPgI0CgvstZoFxQKlUAICCCCAAAIIIIBAEAEahSAbYZGGmgXF9VwcRQABBBBAAAEEEEAgX4BGId9qmjNpFqbZKhJFoE2A0QgggAACCDgK0Cg44o6cWs2CYmQOrI0AAggggAACZQKcjUAkARqFSLvhkIuaBYXD1EyJAAIIIIAAAgggsLAAjYLJ5safhGYh/h6RIQIIIIAAAgggEEmARiHSbjjnomZB4bwM0yOwhgBVIIAAAgggsLkAjcKGFwDNwoabTskIIIAAAh8QIIBAmQCNQpnXMmfTLCyzlRSCAAIIIIAAAgi4CEzQKLjUzaR/BNQsKP485b8IIIAAAggggAACCPwQoFH4wbHnC5qFPfd9aNUsjgACCCCAAALhBWgUwm9RnwRpFvo4swoCCCCwqgB1IYDAegI0CuvtaXVFNAvVdAxEAAEEEEAAAQRWE/igUVhuS9sKollo82M0AggggAACCCCwigCNwio7aVgHzYIh5oipWBMBBBBAAAEEEDAQoFEwQFxxCjULihVroyYEEEBgNgHyRQABBEYI0CiMUJ9oTZqFiTaLVBFAAAEEEEBgFoEp8qRRmGKbxiZJszDWn9URQAABBBBAAIERAjQKI9QnXJNm4e+m8YAAAggggAACCGwiQKOwyUZblEmzYKHIHAggEE2AfBBAAAEErgVoFK5dOHojQLNwA8NhBBBAAAEEEIgiQB5GAjQKRpBMgwACCCCAAAIIIIDASgI0CivtZqda3P5VoVP+LIMAAggggAACCCDwLkCj8G7EGRcCNAsXKBxCAIFfAhxAAAEEEJhXgEZh3r0bnjnNwvAtIAEEEEAAAQR6C7DeRgI0ChtttkepNAseqsyJAAIIIIAAAgiMF6BRGL8HfTJwXIVmwRGXqRFAAAEEEEAAgUECNAqD4FkWAQQQaBVgPAIIIIAAAp4CNAqeuhvNzb8qbLTZlIoAAggg4CXAvAiEEqBRCLUdcydDszD3/pE9AggggAACCCBwFKBROGrUPmfctwDNwjcFTxBAAAEEEEAAgakFaBSm3j6SRwABLwHmRQABBBBAYHcBGoXdrwCH+vlXBQdUpkQAAQQQaBVgPAIIFArQKBSCcXqeAM1CnhNnIYAAAggggAACUQXiNwpR5cgLAQQQQAABBBBAAIGFBWgUFt7c0aXxrwqjdyDu+mSGAAIIIIAAAvEFaBTi79HUGdIsTL19JI8AAgjkCnAeAggsKECjsOCmUhICCCCAAAIIIIAAAm0CHx80Cq2CjH8V4F8VXok4AQEEEEAAAQQQCCdAoxBuS0gIgTYBRiOAAAIIIIAAAhYCNAoWiszxKsC/KrwScQICCCBwJ8BxBBBAYIgAjcIQdhZFAAEEEEAAAQQQ2FdgjsppFObYpyWy5F8VlthGikAAAQQQQACBTQRoFDbZaMq0EWAWBBBAAAEEEEBgFwEahV12Okid/KtCkI0gDQQQSAI8IoAAAgjcCNAo3MBwGAEEEEAAAQQQQGBGAXK2EqBRsJJknmwB/lUhm4oTEUAAAQQQQACBYQI0CsPoWfgswGsEEEAAAQQQQACBOAI0CnH2YqtM+FeFrbabYvcVoHIEEEAAgYkFaBQm3jxSRwABBBBAAAEE+gqw2k4CNAo77XawWvlXhWAbQjoIIIAAAggggMBBgEbhgLHyU2pDAAEEEEAAAQQQQKBEgEahRItzEUAAgTgCZIIAAggggICrAI2CKy+TvwnwPz96E+J9BBBAAIF9BKgUgVgCNAqx9oNsEEAAAQQQQAABBBAIIUCjYLANTIEAAggggAACCCCAwGoCNAqr7eiE9fA/P5pw09ZPmQoRQAABBBDYXuCxUfi/w3+2lwIAAQQQQAABBCYWIHUEECgVeGwUjpOlnuF4jOcIIIAAAggggAACCCCwpkB2o5DK790wpHV5XFuA//nR2vtLdQgggAACCCAwn0Bxo5BKpGFIEjwigEChAKcjgAACCCCAwAQC1Y1Cqo2GIUnwiAACCCCAwK4C1I0AAisKNDcKCYWGIUnwWCvA//yoVo5xCCCAAAIIIICAscCf6cwahT9zff6XhuGTgT8QQAABBBBAAIHtBfSXgLWxPV4AAPNGIdWUGgY9pmM8IrCKQO1Nr8O4zyVWcaYOBBBAAIG5BD6/hA5/tGR/mObzactcLWM/Fw/2R0s9JWPdGoVjEmoWFMdjPEcAAT+Bq/uZ32rMjAACvgLMjkB8gfS945lpjzU887ecO1kcHy3nT3N1aRTSYmoWFOk1jwgg0E/geDPR834rsxICCCCAwKoC+j5R9KxP6yl6rmm+lsOEMklhNX3XRiElrWZBkV7ziEAS0AWenvPoKyDrFL4rMTsCCCCAwGoCEb4/IuQQdV+tbIY0CglVzYIiveYRgeACy6ZndUNZFojCEEAAAQS+BfSd8f0iwJNo+QQg+U5BNorvA4VPhjYKKVc1C4r0mkcEEBgjoJuJYszqrIrACAHWRACBEoGo3xFR8yqx9TxXPorSNUI0CilpNQuK9JpHBBAYI6CbiWLM6qyKAAIIIBBRIPr3gvJTfETEC5JTqU+oRiEZqllIkY7xiAAC/QV0Q1H0X5kVEUAAAQQiCcz0XTBTriP2uMQnZKNwRKNhOGos/fy7uJIL+HsQT1wF2BNXXvPJtV8tYZ4QEyKAwNQCup+0FpB+z+U+tq7H+GeB3D0N3yikMtOFlV7ziAACfQVybyp9s2K12AJkhwACswu03PvTbzc9ljpoTIrSsTq/JW+NL42Uq/djaV5P5+cYTdMopELTBqTXPCKAQD8B3VQU/VZkJQQQQACBUAIZyVj/Vqudb8Xvq2SRHjO24/GUN6PpGoVUrRVQmo9HBBDIF3i7seTPxJkIIIAAAlEFSu/13r/NNH+pVWkNpfOPPl8mKWpzeTKatlFIGK04aZ7FHykPAXOBpxuL+WJMiAACCCAQWkC/x3ok2GudHrVYryEbRc28d9/p0zcKCUMwKdIxHhFAwFfg7sbiuyqzfwnwJwIIIOAnUHJ/1+8vv0x+z1y6Xkktv1eb70ipT6rwymmZRiEVqUcBKfScQAABX4GrG4vvisyOAAIILCpAWdkC/M57ppKP4vms93eXbBRS2QJSpNc8IoCAjwDNgo8rsyKAAAIjBEru6SN/Z5WsXVLTCHOvNUuMlMPZaelGQQUrhKTQc4dgSgSqBHRNekVVQo2DzjeXxukYjgACCCAQXEDfYaNTjJDDaIO39VuMtmgUEqCgFOk1j3EF+NHZtje6zo/RNtuOo6kZAQQQQGAWAX3f5eTKb4scpY+Po9NWjULi0QWlSK95RGB1AV3vCu86jzcX77WYHwEEECgS4GQENhao/Q2wZaOQrhOhKdJrHhFYXUDXu8KzTpoFT13mRgABBGIIeH+XlFYZLZ/S/HucX2MUvVHo4fYhuBRdFmQRBAYLcL0P3gCWRwABBIIKrPqXPXzvlV1w6TqgUTi5cSGdQHi5tICud48C0w3mem6OIoAAAgggYC9w9Z2mYwr71eacsdSCRuFmnwWpuHmbwwgsI6DrXGFdEM2CtSjzIRBYgNQQCCag7zVFsLSmS4dG4WXLdJEpXk7jbQSmF+A6n34LKQABBBDYXkDfZYrtIQwA9Bd+NAoGkEyBwCoC1jdX3WRmtFHeihlzJ+dygVn2epY8y3cgzgiM4+wFmfgJlHzX0yi87INuGoqX03gbgSAC7WmU3EDaVxszgz7TT5GyejpH76XzeIwvoP26C2V/fk/Hesc5h/Nr5XM+dn6tc4h7gbPX+bVGno+dX+scAoFdBGgULnb6eFO4eJtDCCBQIKDPU8HpLqcqh2NYLeIx51Nux/Wenj/NkfPe09xP73nOndbNWSOdk8boMR2L9Ki8jnGbW8EbrfMdx9c8L0j18//UqWaNNCZ3rXS+HnPHPJ2neVI8nTfrezv8ZdGsezMibxqFk7o+/KdDvERgO4FVvij0eVb02ECtk6LHeqxxLxB9H3rll9bR473Wuu+oboVnhZpf4blG1Ll3rdtqP2aZh0bh707pglf8fckDAtsLWDYLvT9bWk8xahO1tmLU+juvG9lduSlG7M+odUfV2rteracYUS9rIuApsH2joA+2whOZuVcRoI7oAvosK6LkqVwUUfJZPY+o1spLMdpfOShG5+G5/uj6tL7Cs0bmRsBCIPcvA7dtFPRBVtRiC1hRO55xCMwgMMs1rs+yIqqpclNEzW+FvKp9HYtXTgrHJaqmVk6KqsGBB0WqKVIunlu2S52ehtHn3qpR0AWdonZj9MNJUTuecXkCGOc59TjLai/02fPI12ve3XP1qN9rzojXQMSczv4z5HjO+eq16lBcvTfyWMSccj1K7vsR68ytk/PeBbZoFHQRK9457s/Qh0ZxfwbvIIBAb4HWz3XvfLXejDkr76gR0TNiTnf7N1OuVzVEzz96flemHEPgKLB0o6APqOJYcOlzNQeK0nGcXyrA+QjkC+hzrcgfEevMmXOPJBnRMWJOb3s2Y85vNUV6f1bfkt8+s9YY6TrpnUvuni3ZKKh4RQu6PiCKljkYi8AqApE+C62f7Sh7skodj56Ob0b0i5hT7hbMmPtMOc+Ua+41cz5vhxrPNe/weqlGQRepomXj9INI0TIHYxFA4Fqg9fPZOv46q3FHV6tnnOT4ldnL8XtABvYCV7+HnlbR50DxdA7vzSWwRKOgi1JRS68PQoraORiHAAII1Ai03Ltq1lthTDSzaPnU7vEqddTW7z1uVl/9Piq1mbXW0jp3OH/qRkEXoqJ2o3TxK2rHzzOOTBFoFxj9WWn5rLdX7zvDyrX5yo2fnb0bvwdkEFNAnw1FzOzIKldgukZBF12K3CLP5+kHj+J8nNcIIBBTQJ/5HpnpvnAVPdYurrFHUgHXiOQUKZeAW0VKFwKzXjO6L16Uk3VINSuyTuakcALTNAq6yBQtgrrQFS1zMBYBBPoKtH7un7LV/eAYd+cez9Hzu/O8j2vtnGjNI2eNq3Na12X8vcCV9/HY/UjeOQocvRIVuAAAEABJREFUzc7Pj+eNeh55XXm15Kd7uaJlDsbaCOTug/Y8fKOgYhQtNCpU0TIHY/sJsFf9rEes1Pp5bs1Z11eK2rnSeD3WznE1brTNVU6rHdOe5cRb3d57dc7xLZ/S89/mW+n9o81TXbnnPc2R8573tZOTQ+05Mqodm8apfkV6zWNsgbCNgi4iRQufLmhFyxzvYzkDgX0Een+eWu8B553xyN9jznPevG4T0B6laJvpa7T1dfk169efVnlazfOV1Zx/thi0jJ1TKz9r2eSffX+mPkcp7s/iHWsBmZfMGa5RUAGKkiLO5+oiVpyP8xoBBOYRaL0PHCvV/UBxPPb4vPBNza0oHHZ5umXdlwtsdFB7opihZOWpsM5Vcyqs5408n+pVWOSoeRQWc600h0wUVjXpvqewmo957ATCNAq6QBS1pemCTVE7B+MQQGA9Ad0XelXVc61eNc24jvZB4ZF7y/fUXT5euR7X67HGcb1Rz5/qbMnJel6P66ilvtqxHi6yUdTmxLh7gRLXtLfDGwUlrbgv6/kdFaJ4Pot3EUBgJoGWe8KxzhH3Bos1reo/Wuzy3MK/p1XPfLWWomd9Pdfyrs17/p5WlmvJRWE5p+bSfVCh58Q4gWGNgjZf8Vz6/bu6KBX3Z/DOjALs6Yy7FjPnkdfSyLVj7kafrGZzH5XvqHU9r4JeNfVax9PKa24vG/1WVHjlvcu8tYZdGwUlmaJ2Y3QhKmrHMw4BBAYLdFg+wj2iNQfdKztQLbNEq3cOhOWe9Mj3qabR6z/lxnvzCui6UnhUoM+fwmPu1ecsdTvuYZdGQQkqWjZCSSta5mAsAgjEF2i9V8SvkAytBWb7bpgt35z9GnlOb0+r9Va+18kohfW1ITeF9byrztdq5dooKDlFC77XhdaSE2MRQCCugO4ZUbKLlEsUE+s8ehm3fpelunvlm9Z7eoyUy1OevDe3gK4zhXUV+kwqrOddab4an8NefVK4NApKTPG5QuUfSlRROZxhCCCwocBq94zW++iGlwAlFwrM/pkZlf+odQu3N9TpMlNYJ6X7pMJ63tnnqzG52h/TRkFJKVpwlaSiZQ7GzinAvhvs2+RTtN4/IpbPde23K7PZzpav384x884C+hyksHRY8fujxkcOipqxV2NMGgUlpLhaIOdYumD0mHM+5yCAAAJnAe4fZ5G1X++03947OavlrHl77+dM82sPFVY567eowmq+meZR3YranO/2oalRUEKKlqTuEqudk3EIIIAAAghYCrR8z6U8+K5LEus8sqd2eynLFBazWnxmLfJ4mMPkLdWZomVC2d+NL24UUkJ6vJv07bgSUrydx/v7CHA97LPXO1bK9b3jrs9VM9foXPu1cra6FhWtNbb8Tm1d23q8arkKi3XerLMbhZRgS1JKRtEyB2MRGCbAwmEFuK+E3RqXxGbb79nyddk0JkWgUECfG0XhsB+n67frjwOOL7SWV3ilneP72iikoluSVCKKljkYiwACawvoXrN2hXXV4VLnljuK8xBAILaAfj8qarPkHnotl2v62Ci04ioJxXWKHEXgS4Br5MuBP+sFdK+KHvXVMRIBBBBAQL8VFBkSv07R98OvgxsfKHF8bBRqDZWAonY84xBAIKaAxc2We0PMvZ0lK64fv53C1s+Wme0Eaq9Ti+8vuyrGzCQ7RcnqZo2CFk5RkgDnIvApwB8IIIAAAggggECGAL83M5BOp8jsdCjrZXOjoIUVWatxEgInAa6dEwgvEVhIgFIQQAABT4HS3xC7/auCfFLU7kN1o9C6cG3CjEMAAQQQQGAWAX1XzpIreSKQIRDuFD5jv7dEJorf75QfKW4UtLCifClGIIDAzAK7/U3MzHtF7ggggMBOAiW/S1f9LpNBCsu9z24UPBa3LIS5HgSCvqVrKmhqpIUAAggggAACCIQS0O+mu/BK9LVRSAl5JcC8CCCwj4DuJ/tU61sps88hsOrfXs6hT5Y7CZR8v3h8LrW+d4zYz8dGQQWPSIo11xfg2pprjz1uqnMJkC0CCCDgLsACCIQTeGwUwmVLQggggAACCCCAAAIIXAjwl5AXKI2HaBQaAT8YXyzAB7mYbOgAq39NYN+HbiOLI4AAAgggUCxAo1BMxgAEEFhdIFJ9NFiRdmPtXKz+UmBtJapDYC8BGoW99nt4tfzoGb4FRQnM9MNB19aKUbRhnIwAAncCHN9EQN8DOaXO9P2WU4/XOTQKXrLMi8DkApY30Zwbd845k5OS/qYClp+lTQkpGwEEBgnEbhQGobCsjwA/BH1cmRUBBBBoFaCZaRVkPAJrCtAorLmvVIVAk4Dlj4Zzg9iUGIMRGCBgcQ1bfqYGELDkpgJct5tu/KFsGoUDBk/9BCy+aP2yY+ajwKxfDLPmfbTnOQIjBAw+OyPSZk1HAV0TCi2RHvWc2E+ARmG/PadiBG4FrL8QShvE0vNvC+ENBAIKWH++ApZIShML6PpMMXEZpG4m8DURjcKXA386CvDjzxHXcGp9QRhON2SqFWoYAsei2wrwmdl2678L1zWg+D7AEwQOAjQKBwyeIjC7QG3+Hl8SoxpEj1pqXRm3joDV9cz1uc41sVMlXLc77fbPWmkUfnrwyljA6svVOC2mOwhE+wLgmjlsDk+XFCj8zLkZRMnDrUAmzhJY7Z6be12vVnfWZlecRKNQgcaQPAE+hHlOo87SzVThsf7ovfeqy8OKOfcUGH2Njl5/z12fu2quGcv9m2cuGoV59opMETAR0M1eYTLZxSSjm4SUkmeNaY3SR+WkKB3H+TEErK/tUdfCqHVj7CJZIIBAiQCNQokW52YLWH+hZi/seOLsU+vHgWKGOqyun0j1HnM5Pp9hP8jRT6D3tdB7PT85ZrYUyL3nRr9+oudnuWe95qJR6CW90Tq5N5yNSIaVqptmih5JRNx71d+j9rs1tL7i/P7VsfM5o15Hzs3YpHg6j2u8h7fWUBQXzICwAtrPq/BOWGt6r+E9v8fn2DvnUfPTKIySZ10EjAV08z6H8RKP01nfeC3nSy6PBTi8qXWfpn17/2ms93uRc/OufcT88lZ4rO01r0euzPkuoP1U3J2p9xR371sc956/Jsd/OdWMZsydAI3CnQzHqwQsf9xVJTDRIN3ULGNk6V77bj1v8va2KllH53rnUzt/SW4l59bmE2Wc9XV5rEuOiuOxmueaI0XNeMbEEyjdT51fUkXpdV06f0kupedGyqU09+jn0yhE36GJ8iu9yRxL4/m8AjPuu75UFJbqmi9F6bwaVzqm1/nKTXFeT8eOcX5/9dfe132Nbc2Y1fdplfq0tzW11I7LXct7/pw8SnPw/uzm5DzTOTQKM+1W4Fz54AXeHMfUeuy75xr6gklRw5TG6rFm/HGMxRzH+ayfK79jZMzPKUYCR/en50bLMc1iArpmckuqud+WzJ+bR+55I9fOzXH282gUZt9B8kdgkEDNF0ptqj3W0hdOadTWczdO69+9x/F4Aj2uy3hVk1FvAYv7Qskcz9f1dfUl81/PUH60Zs2a2sozW2sEjcJa+zmkGj54Q9iHLjpiz0es2RvZqkareXrXP+N6WM+4a+TsIaAf7gqPuc9z9lrnvO6Or2kUNth1zxL5kvTUjTk3ex5zX8hqnMAqn4lV6hh3Jayzcsu1oB/xCg8Nzauombulppr1VhlDo7DKTg6ogw/dAPTBS47e89Hre/IX1uaZCnNXCLB/FWgMCS3Qek3rB32KlkLTHHqsnae1ltp1VxhHo7DCLg6ogQ/dAPSBS2q/FQNT+F46Sh7fCRk88ajJY06DUpeeYmbzmXNf56KKV4nVdaEf+ee4qvZ8jl5fnVdyzKqGkjVXOpdGYaXdpBYEHAQi3mSVk8Kh3K5TqgZF10VZzFVgxv2cMWfXTWTyHwJe14eagHP8WNjghVfuBqlNMwWNQuNW7TicD94eu659VkSuNnp+T3Y9cu+xxlONu743k/tMue56PUWoe8brZMacI+z1OQcahbMIrx8F+OA98izxpvZYMUsxDrm6l94z555rucNNtMAM7jPkONGWL5+qrhfFDIXOkucMljQKM+xSkBz54AXZCKc0tL8Kp+ldp1XeCtdFDCZXjgqDqYqmGLFmUYKLnix3RbTylJMiWl6++ew9u+V+W87lsSvR8/Oo2XNOGgVP3YXm5oO30GYeStG+pjgcnvZp1Foi5KUcpt3YyROPZB8pl8m3tVv6EfdMOSm6IWQspHwUGadySoFA6EahoA5OdRTgg+eIO2Bq7WeKAct3WTJKfVHySOjKJz3nsa+A7BV9V/23mtZW/DvCs5kEWvauZeybkeZWvJ3n+b7WV3iusfPcNAo7735G7Xz4MpCCn6I9PMbgdLsun+ruuuifxUat+2fp1/965OYx52shk56QrPTYowSto+ixFmv4CtTsY82Ymiq0jqJmbO0YraeoHc+4PAEahTynLc/iA3i/7bKZJe6r2Oed815ZV+49v3W+mu+Ys16XRu3447ia56V5Rj7/WL9lni3zHsfmP/93Zkkd/0bVPStZy+vcusz/jSrNSyNzx5Scmzvn23laM8XbuaXvp3nTY+n4lvPTmk+PLfNHHkujEHl3BuamD8PA5VkaAVcBXd9X8bbo1RgdexsX/X3VUBrRa5otvzv/pzpqxjzNx3tzCBz3/Zzx03vnc71fH3M5Pn9b93ju8fnbON43Fvg7HY3CXwgevgTSh/LrFX8isJdAuv7vHvfSoNoIAnfXoo5HyI8cxgroOjjG2GzyVj/me/U8bxbO6iVAo9BLeoJ19IGdIE1SvBfgHQQQQAABBBBAwEyARsGMcu6JaBLm3j+yRwCBVQWoCwEEEBgnQKMwzj7MyjQJYbaCRBBAAAEEEEBgdYGJ6qNRmGizrFNVg6Cwnpf5EEAAAQQQQAABBOYXoFGYfw+rKqBBKGZjAAIIIIAAAgggsJUAjcJW2/1VLE3ClwN/IoDA7gLUjwACCCDwJECj8KSz2HtqEBSLlUU5CCCAAAIIIIDAlwB/mgrQKJhyxp2MBiHu3pAZAggggAACCCAQUYBGIeKuGOakBkFhOKXHVMyJAAIIIIAAAgggEEyARiHYhlimQ4NgqclcCCBQJsDZCCCAAAKzC9AozL6DF/mrQVBcvMUhBBBAAAEEEECgToBR2wnQKCy05WoOFAuVRCkIIIAAAggggAACgwRoFAbBWy6r5kBxMyeHEUAAAQQQQAABBBAoFqBRKCaLM0DNgSJORmSCAAJ9BFgFAQQQQAABfwEaBX9j8xXUHCjMJ2ZCBBBAAAEEEBgjwKoIBBSgUQi4KXcpqTlQ3L3PcQQQQAABBBBAAAEErARoFDIl/7v+z3+Zw6tPU2OQonoSBiKAAAIIIIAAAgggUCjw2Cjc/Dbe8nCha/PpNAfNhEyAQKUAwxBAAAEEEEBAAo+Ngk4g+gmk5kCP/VZlJQQQQAABBBYXoDwEEKgSoFGoYrMbpKYghd2szIQAAggggAACCCCAQJtA5HKJeX8AAAB4SURBVEahrbKgo1NTkB6DpklaCCCAAAIIIIAAApsL0Cg4XwCpIUiPzssxPQLBBUgPAQQQQAABBGYRoFEw2qnUCJwfjaZnGgQQQAABBGIKkBUCCCwr8NkopB+3y1ZZWFjyKHksXILTEUAAAQQQQAABBBAIKZCS+h8AAAD//+y3uQYAAAAGSURBVAMAVwcZlxCc5Q8AAAAASUVORK5CYII=" alt="DETRAN-SP"></div>
+    <div class="title">
+      <h1>Capacidade Operacional e Instauração de Processos</h1>
+      <p>Coordenadoria de Penalidades de Habilitação — DHC</p>
+    </div>
+    <div class="update">Cenário 2026<br>Dados D-1</div>
+  </div>
+  <nav class="menu" id="topMenu">
+    <a href="#resumo">Resumo</a>
+    <a href="#incidente">Instauração por Pontos</a>
+    <a href="#timeline">Linha do Tempo</a>
+    <a href="#instaurados">Instaurados</a>
+    <a href="#defesas">Defesas</a>
+    <a href="#capacidade">Capacidade</a>
+    <a href="#dimensionamento">Dimensionamento</a>
+    <a href="#conclusao">Conclusão</a>
+  </nav>
+</header>
+
+<main>
+<section class="section reveal" id="resumo">
+<div class="section-head"><div><span class="num">01</span><h2>Resumo executivo</h2><p>Visão consolidada do estoque, decadência, fluxo de trabalho e capacidade disponível.</p></div><span class="tag">visão executiva</span></div>
+<div class="grid g4">
+<div class="kpi accent"><div class="n" data-count="319782">319.782</div><div class="l">Suspensão por pontos a instaurar</div></div>
+<div class="kpi"><div class="n" data-count="10000">10.000</div><div class="l">Autosuspensivas</div></div>
+<div class="kpi danger"><div class="n" data-count="342392">342.392</div><div class="l">Processos que decaíram</div></div>
+<div class="kpi warn"><div class="n">30 dias</div><div class="l">Prazo BR informado</div></div>
+</div>
+<div class="alert reveal"><strong>Objetivo:</strong> evidenciar que a atual estrutura de 12 julgadores não tem capacidade para absorver o estoque e o fluxo corrente dentro do prazo informado.</div>
+</section>
+
+<section class="section reveal" id="incidente">
+<div class="section-head"><div><span class="num">02</span><h2>Instauração de processos por pontos — incidente e evolução</h2></div><span class="tag">Databricks</span></div>
+<div class="banner reveal"><p>O incidente tem como base a identificação de <strong>queda acentuada</strong> no número de processos de suspensão do direito de dirigir instaurados a partir de <strong>março de 2026</strong>, com agravamento significativo em abril. Dados extraídos da ferramenta <strong>Databricks</strong>.</p></div>
+<div class="months"><div class="month-card  reveal">
+          <span>Janeiro</span><strong data-count="29865">29.865</strong><small>instaurações</small>
+        </div><div class="month-card  reveal">
+          <span>Fevereiro</span><strong data-count="28134">28.134</strong><small>instaurações</small>
+        </div><div class="month-card decline reveal">
+          <span>Março</span><strong data-count="19118">19.118</strong><small>instaurações</small>
+        </div><div class="month-card decline reveal">
+          <span>Abril</span><strong data-count="4655">4.655</strong><small>instaurações</small>
+        </div><div class="month-card  reveal">
+          <span>Maio</span><strong data-count="7861">7.861</strong><small>instaurações</small>
+        </div><div class="month-card decline reveal">
+          <span>Junho</span><strong data-count="476">476</strong><small>instaurações</small>
+        </div><div class="month-card decline reveal">
+          <span>Julho</span><strong data-count="13">13</strong><small>instaurações</small>
+        </div><div class="month-card decline reveal">
+          <span>Agosto</span><strong data-count="0">0</strong><small>instaurações</small>
+        </div></div>
+<div class="reductions">
+<div class="reduction reveal"><b>▼ 32,18%</b><small>Redução de março em relação a fevereiro</small></div>
+<div class="reduction reveal"><b>▼ 75,65%</b><small>Redução de abril em relação a março</small></div>
+<div class="reduction reveal"><b>▼ 93,94%</b><small>Redução de junho em relação a maio</small></div>
+</div>
+</section>
+
+<section class="section" id="timeline">
+<div class="section-head"><div><span class="num">03</span><h2>Linha do tempo do incidente</h2></div><span class="tag">abril a agosto/26</span></div>
+<div class="timeline">
+    <article class="tl-card reveal" style="--delay:0ms">
+      <div class="tl-marker red"></div>
+      <div class="tl-content">
+        <div class="tl-top"><span class="tl-date">07/04/2026</span><span class="tl-tag alert">Alerta</span></div>
+        <h3>Abertura da Sustentação DMND0002370, STRY0016717</h3>
+        <p>Aberta a sustentacao DMND0002370, STRY0016717 com questionamento sobre a conformidade na Instauração dos processos por pontuação, considerando as regras da demanda 229903, que descreveu as regras quando a observância da incidência do instituto da decadência, considerando a queda acentuada nas instaurações ja no mes de marco.</p>
+      </div>
+    </article>
+    <article class="tl-card reveal" style="--delay:35ms">
+      <div class="tl-marker blue"></div>
+      <div class="tl-content">
+        <div class="tl-top"><span class="tl-date">27/04/2026</span><span class="tl-tag meeting">Reuniao</span></div>
+        <h3>Primeira reunião sobre o tema</h3>
+        <p>Solicitado agendamento de reunião para entendermos como a PRODESP estava instaurando os processos, uma vez que não tivemos retorno para o chamado.</p><p>Segundo a PRODESP as instaurações estavam sendo processadas:</p><p>Solicitada a imediata retificação da validação da infração maior ou igual a 12 meses da data do processamento e da aplicação da contagem dos 12 meses na infração mais recente do condutor e não da data do processamento do JOB.</p><ul><li>1ª condição: A análise não é especifica por condutor. Pega-se tudo o que tem na base de dados de pontuações e aplica-se a regra, considerando a data do processamento 12 meses para tras. Separa por condutor e verifica a quantidade de pontos e se haverá aplicação do decadencial na infração mais recente.</li><li>2ª condição: A rotina vai buscar uma infração que tenha completado 12 meses e que seja menor ou igual a 12 meses da data do processamento. Se ela não encontrar o bloco é desprezado.</li></ul>
+      </div>
+    </article>
+    <article class="tl-card reveal" style="--delay:70ms">
+      <div class="tl-marker blue"></div>
+      <div class="tl-content">
+        <div class="tl-top"><span class="tl-date">22/05/2026</span><span class="tl-tag meeting">Reuniao</span></div>
+        <h3>Reunião solicitada pela DHC após despacho com a CPH</h3>
+        <p>Na reunião foram trazidos diversos incidentes abertos sobre a falta de instauração dos processos tanto de suspensão por pontos e autosuspensiva quanto de cassacao.</p>
+      </div>
+    </article>
+    <article class="tl-card reveal" style="--delay:105ms">
+      <div class="tl-marker red"></div>
+      <div class="tl-content">
+        <div class="tl-top"><span class="tl-date">26/05/2026</span><span class="tl-tag alert">Alerta</span></div>
+        <h3>Reunião para acompanhamento dos incidentes</h3>
+        <p>Para o incidente DMND0002730 STRY0016717 a PRODESP informou ainda não ter encontrado a causa raiz da falta de instaurações.</p>
+      </div>
+    </article>
+    <article class="tl-card reveal" style="--delay:140ms">
+      <div class="tl-marker yellow"></div>
+      <div class="tl-content">
+        <div class="tl-top"><span class="tl-date">29/05/2026</span><span class="tl-tag fix">Correcao</span></div>
+        <h3>Reunião de acompanhamento com participação da Aline</h3>
+        <p>Ainda sem resposta para o incidente STRY0016717. Informado que o resultado da análise seria disponibilizado no SPM até o dia 05/06/2026. DMND0002597 aberta no dia 30/04/2026 relatando que infrações que compuseram um processo de cassação também compuseram processo por pontos correção. Diante da necessidade de correção e para evitar que novos processos por pontos fossem instaurados com infrações cometidos durante o período de suspensão, foi autorizado pela Aline a paralisação do JOB de instauração dos processos por pontos até 03/06/2026 para correção.</p>
+      </div>
+    </article>
+    <article class="tl-card reveal" style="--delay:175ms">
+      <div class="tl-marker blue"></div>
+      <div class="tl-content">
+        <div class="tl-top"><span class="tl-date">02/06/2026</span><span class="tl-tag meeting">Reuniao</span></div>
+        <h3>Reuniao de acompanhamento dos incidentes</h3>
+        <p>A PRODESP informou que o incidente ainda está em análise e que seria finalizado até e registrado no SPM até sexta-feira dia 05/06/2026.</p>
+      </div>
+    </article>
+    <article class="tl-card reveal" style="--delay:210ms">
+      <div class="tl-marker red"></div>
+      <div class="tl-content">
+        <div class="tl-top"><span class="tl-date">11/06/2026</span><span class="tl-tag alert">Alerta</span></div>
+        <h3>Reuniao de acompanhamento dos incidentes</h3>
+        <p>PRODESP informou que o incidente ainda estava em análise.</p>
+      </div>
+    </article>
+    <article class="tl-card reveal" style="--delay:245ms">
+      <div class="tl-marker red"></div>
+      <div class="tl-content">
+        <div class="tl-top"><span class="tl-date">18/06/2026</span><span class="tl-tag alert">Alerta</span></div>
+        <h3>Análise suspensa - Realocação para projeto CNPJ Alfa</h3>
+        <p>PRODESP registra no SPM que a análise seria suspensa até 01/07/2026 devido à realocação dos recursos no projeto CNPJ Alfa.</p>
+      </div>
+    </article>
+    <article class="tl-card reveal" style="--delay:280ms">
+      <div class="tl-marker blue"></div>
+      <div class="tl-content">
+        <div class="tl-top"><span class="tl-date">05/07/2026</span><span class="tl-tag meeting">Reuniao</span></div>
+        <h3>Nova data registrada</h3>
+        <p>Prodesp registra no SPM nova data para 10/07/2026.</p>
+      </div>
+    </article>
+    <article class="tl-card reveal" style="--delay:315ms">
+      <div class="tl-marker green"></div>
+      <div class="tl-content">
+        <div class="tl-top"><span class="tl-date">21/07/2026</span><span class="tl-tag resolved">Resolucao</span></div>
+        <h3>Execução do JOB para conferência das correções</h3>
+        <p>Execução do JOB para conferência das correções antes da efetiva instauracao dos processos.</p>
+      </div>
+    </article>
+    <article class="tl-card reveal" style="--delay:350ms">
+      <div class="tl-marker blue"></div>
+      <div class="tl-content">
+        <div class="tl-top"><span class="tl-date">07/08/2026</span><span class="tl-tag meeting">Reuniao</span></div>
+        <h3>Reunião para explicação da adequação das regras STRY0016717 com a DTI e a PRODESP</h3>
+        <p>A PRODESP ainda não tinha a resposta para a queda das instaurações.</p>
+      </div>
+    </article>
+    <article class="tl-card reveal" style="--delay:385ms">
+      <div class="tl-marker blue"></div>
+      <div class="tl-content">
+        <div class="tl-top"><span class="tl-date">11/08/2026</span><span class="tl-tag meeting">Reuniao</span></div>
+        <h3>Reunião técnica PRODESP e CPH</h3>
+        <p>Apresentado o número de 44.163 processos aptos para instauração. Foram analisadas 840 mil linhas de pontuações. Informado que o JOB estava validando regra de PGU e por isso perdia performance. Oportunidade em que foi esclarecido que não há mais condutores ativos com PGUs.</p><p>Apresentados casos em que o sistema não poderia instaurar o processo, mas devido à simulação da aplicação do marco inicial 12 meses da infração mais antiga o processo seria instaurado. Na oportunidade, também foi relatado a identificação de problemas na aplicação.</p>
+      </div>
+    </article>
+    <article class="tl-card reveal" style="--delay:420ms">
+      <div class="tl-marker red"></div>
+      <div class="tl-content">
+        <div class="tl-top"><span class="tl-date">12/08/2026</span><span class="tl-tag alert">Alerta</span></div>
+        <h3>Reunião para apresentação do levantamento</h3>
+        <p>Levantamento apresentado considerando como marco inicial a infração mais antiga 12 meses para frente. Na reunião ficou evidente que a execução não está suficientemente consolidada, por existirem interpretações sobre o marco inicial para formação dos blocos.</p>
+      </div>
+    </article>
+    <article class="tl-card reveal" style="--delay:455ms">
+      <div class="tl-marker green"></div>
+      <div class="tl-content">
+        <div class="tl-top"><span class="tl-date">19/08/2026</span><span class="tl-tag resolved">Resolucao</span></div>
+        <h3>Reunião para esclarecimentos do marco inicial</h3>
+        <p>Após análise de alguns casos, Ricardo e Evelyn chegaram à conclusão que seria menos danoso se considerarmos como marco inicial a infração mais recente olhando 12 meses para trás para fechamento do bloco.</p><p>Olhar o retrato atual do condutor e não por período do processamento. A sugestão foi para a aplicação dessa regra para os atuais.</p><p>Para o que sobrasse, sugerimos a varredura do banco até o dia 12/04/2021 e um job apartado considerando como marco inicial a infração mais antiga 12 meses para a frente para o tratamento do legado.</p><p>Prodesp ficou de confirmar se o JOB vai olhar da mais recente 12 meses para trás, depois na semana que vem olha a mais recente do condutor 12 meses para trás e assim sucessivamente.</p>
+      </div>
+    </article></div>
+</section>
+
+
+<section class="section reveal" id="instaurados">
+  <div class="section-head">
+    <div>
+      <span class="num">04</span>
+      <h2>Processos instaurados — 2026</h2>
+      <p>Distribuição mensal dos processos de cassação e suspensão conforme os dados fornecidos no cenário atual.</p>
+    </div>
+    <span class="tag">instaurações</span>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Mês/Ano</th>
+          <th>Cassação</th>
+          <th>Suspensão</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>jan/26</td><td>3.403</td><td>36.182</td><td>39.585</td></tr>
+        <tr><td>fev/26</td><td>7.680</td><td>36.043</td><td>43.723</td></tr>
+        <tr><td>mar/26</td><td>295.207</td><td>26.341</td><td>321.548</td></tr>
+        <tr><td>abr/26</td><td>53.308</td><td>11.822</td><td>65.130</td></tr>
+        <tr><td>mai/26</td><td>46.949</td><td>15.774</td><td>62.723</td></tr>
+        <tr><td>jun/26</td><td>65.955</td><td>12.000</td><td>77.955</td></tr>
+        <tr><td>jul/26</td><td>41.761</td><td>3.332</td><td>45.093</td></tr>
+        <tr><td>ago/26</td><td>47.585</td><td>11.873</td><td>59.458</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+
+<section class="section reveal" id="defesas">
+  <div class="section-head">
+    <div>
+      <span class="num">05</span>
+      <h2>Entrada de defesas — acumulado</h2>
+      <p>Histórico de 2024/2025 e evolução mensal em 2026.</p>
+    </div>
+    <span class="tag">dados D-1</span>
+  </div>
+
+  <div class="grid g2 defense-summary">
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Período</th>
+            <th>Cassação</th>
+            <th>Suspensão</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2024</td><td>31.417</td><td>45.611</td><td>77.028</td></tr>
+          <tr><td>2025</td><td>3.230</td><td>58.053</td><td>61.283</td></tr>
+          <tr><td>jan/26</td><td>35</td><td>2.229</td><td>2.264</td></tr>
+          <tr><td>fev/26</td><td>58</td><td>2.631</td><td>2.689</td></tr>
+          <tr><td>mar/26</td><td>513</td><td>4.347</td><td>4.860</td></tr>
+          <tr><td>abr/26</td><td>7.816</td><td>2.901</td><td>10.717</td></tr>
+          <tr><td>mai/26</td><td>11.358</td><td>1.929</td><td>13.287</td></tr>
+          <tr><td>jun/26</td><td>5.843</td><td>1.717</td><td>7.560</td></tr>
+          <tr><td>jul/26</td><td>6.813</td><td>1.782</td><td>8.595</td></tr>
+          <tr><td>ago/26</td><td>4.376</td><td>670</td><td>5.046</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="defense-insights defense-inline">
+      <div class="defense-number">
+        <span>DEFESAS RECEBIDAS JAN–AGO/26</span>
+        <strong>55.018</strong>
+      </div>
+      <div class="defense-number">
+        <span>MÉDIA MENSAL JAN–AGO/26</span>
+        <strong>6.877</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section reveal" id="capacidade">
+  <div class="section-head">
+    <div>
+      <span class="num">06</span>
+      <h2>Capacidade de julgamento da equipe</h2>
+      <p>Capacidade operacional conforme os novos parâmetros informados.</p>
+    </div>
+    <span class="tag">capacidade atual</span>
+  </div>
+
+  <div class="capacity-new">
+    <div class="capacity-mainline">
+      <div class="capacity-stat">
+        <span>POR DIA POR PESSOA</span>
+        <strong>155</strong>
+        <small>julgamentos</small>
+      </div>
+
+      <div class="capacity-connector">→</div>
+
+      <div class="capacity-stat">
+        <span>POR MÊS POR PESSOA</span>
+        <strong>1.853</strong>
+        <small>julgamentos</small>
+      </div>
+
+      <div class="capacity-connector">×</div>
+
+      <div class="capacity-stat">
+        <span>EQUIPE ATUAL</span>
+        <strong>12</strong>
+        <small>julgadores</small>
+      </div>
+
+      <div class="capacity-connector">=</div>
+
+      <div class="capacity-total">
+        <span>CAPACIDADE MENSAL DA EQUIPE</span>
+        <strong>22.236</strong>
+        <small>julgamentos por mês</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section reveal" id="dimensionamento">
+  <div class="section-head">
+    <div>
+      <span class="num">07</span>
+      <h2>Estoque potencial vs. capacidade da equipe</h2>
+      <p>Comparação entre estoque potencial e capacidade mensal da equipe.</p>
+    </div>
+    <span class="tag">dados D-1</span>
+  </div>
+
+  <div class="stock-flow">
+    <div class="stock-item stock-main">
+      <div class="stock-icon">▣</div>
+      <div>
+        <strong>329.782</strong>
+        <span>ESTOQUE POTENCIAL</span>
+        <small>319.782 + 10.000</small>
+      </div>
+    </div>
+
+    <div class="stock-arrow">→</div>
+
+    <div class="stock-item stock-capacity">
+      <div class="stock-icon light">👥</div>
+      <div>
+        <strong>22.236</strong>
+        <span>CAPACIDADE MENSAL</span>
+        <small>1.853 por pessoa/mês × 12 julgadores</small>
+      </div>
+    </div>
+
+    <div class="stock-arrow">→</div>
+
+    <div class="stock-item stock-months">
+      <div class="stock-icon light">▦</div>
+      <div>
+        <strong>≈ 15</strong>
+        <span>MESES TEÓRICOS</span>
+        <small>Tempo necessário para absorver todo o estoque potencial.</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="stock-timeline">
+    <div class="timeline-summary">
+      <div class="timeline-ring">
+        <div class="timeline-ring-inner">▦</div>
+      </div>
+      <div>
+        <span>TEMPO PARA ZERAR O ESTOQUE</span>
+        <strong>≈ 15 <small>MESES</small></strong>
+      </div>
+    </div>
+
+    <div class="timeline-scale">
+      <div class="timeline-label">MESES</div>
+      <div class="month-track">
+        <div class="month-fill"></div>
+        <div class="month-cells">
+          <i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i>
+        </div>
+      </div>
+      <div class="timeline-ticks">
+        <span>0</span><span>5</span><span>10</span><span class="active">15</span><span>20</span>
+      </div>
+      <p>O estoque atual equivale a aproximadamente <strong>15 meses</strong> da capacidade mensal da equipe.</p>
+    </div>
+  </div>
+
+  <div class="scenario-alert">
+    <div class="alert-icon">!</div>
+    <p><strong>Cenário teórico:</strong> 329.782 ÷ 22.236 ≈ 15 meses, sem considerar novas entradas, afastamentos, férias, retrabalho, diligências ou outras atividades operacionais.</p>
+  </div>
+</section>
+
+
+<section class="section reveal" id="conclusao">
+<div class="section-head"><div><span class="num">08</span><h2>Conclusão executiva</h2><p>Síntese para apoio à tomada de decisão.</p></div><span class="tag">mensagem principal</span></div>
+<div class="conclusion reveal"><h3>A atual capacidade não acompanha o volume projetado.</h3><p>Com 12 julgadores e capacidade total informada de 22.236 julgamentos por mês, a demanda potencial de 329.782 processos representa aproximadamente 15 meses de trabalho em cenário de capacidade plena. O histórico do incidente de instauração e o fluxo contínuo de defesas reforçam o risco de formação de passivo e a necessidade de reforço de mão de obra e/ou estratégia operacional específica.</p></div>
+</section>
+</main>
+
+<footer class="footer">
+  <span>Coordenadoria de Penalidades de Habilitação — DHC</span>
+  <span>DETRAN-SP · Cenário 2026 · Dados D-1</span>
+</footer>
+</div>
+
+<button class="back-top" id="backTop" title="Voltar ao topo">↑</button>
+
+<script>
+const revealObserver=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      e.target.querySelectorAll('.fill').forEach(b=>b.style.width=(b.dataset.w||0)+'%');
+    }
+  });
+},{threshold:.10});
+document.querySelectorAll('.reveal,.section').forEach(el=>revealObserver.observe(el));
+document.querySelectorAll('.fill').forEach(el=>el.style.width='0');
+
+const menuLinks=[...document.querySelectorAll('#topMenu a')];
+const sections=menuLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const navObserver=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const id='#'+e.target.id;
+      menuLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')===id));
+    }
+  });
+},{rootMargin:'-25% 0px -65% 0px',threshold:0});
+sections.forEach(s=>navObserver.observe(s));
+
+const backTop=document.getElementById('backTop');
+window.addEventListener('scroll',()=>backTop.classList.toggle('show',window.scrollY>500),{passive:true});
+backTop.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+</script>
+</body>
+</html>
