@@ -2428,6 +2428,55 @@ tbody tr:hover{background:#F0F8FC}
   }
 }
 
+
+/* ===== MÉDIAS DA PROJEÇÃO 378 MIL ===== */
+#capacidade .projection-average-strip{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  width:100%;
+  border-bottom:1px solid #DCE7EF;
+  background:#FFFFFF;
+}
+#capacidade .projection-average-strip > div{
+  min-height:108px;
+  padding:20px 28px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  border-right:1px solid #E1EBF1;
+}
+#capacidade .projection-average-strip > div:last-child{
+  border-right:0;
+  background:#F2F8FC;
+}
+#capacidade .projection-average-strip span{
+  color:#738899;
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:.75px;
+  text-transform:uppercase;
+}
+#capacidade .projection-average-strip strong{
+  margin-top:6px;
+  color:#005CA8;
+  font-size:28px;
+  line-height:1;
+}
+#capacidade .projection-average-strip small{
+  margin-top:7px;
+  color:#7B8F9E;
+  font-size:9px;
+}
+@media(max-width:700px){
+  #capacidade .projection-average-strip{
+    grid-template-columns:1fr;
+  }
+  #capacidade .projection-average-strip > div{
+    border-right:0;
+    border-bottom:1px solid #E1EBF1;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -2603,14 +2652,14 @@ tbody tr:hover{background:#F0F8FC}
 <div class="section-head"><div><span class="num">03</span><h2>Resumo executivo</h2><p>Visão consolidada do estoque, decadência, fluxo de trabalho e capacidade disponível.</p></div><span class="tag">visão executiva</span></div>
 <div class="grid g4">
 <div class="kpi accent kpi-total-projecao">
-  <div class="n" data-count="380000">380.000</div>
+  <div class="n" data-count="378000">378.000</div>
   <div class="l">TOTAL PROJETADO DE PROCESSOS</div>
   <div class="kpi-breakdown">
     <div><span>Susp. por pontos</span><strong>319.000</strong></div>
     <div><span>Autosusp.</span><strong>10.000</strong></div>
-    <div><span>Cassação</span><strong>51.000</strong></div>
+    <div><span>Cassação</span><strong>49.000</strong></div>
   </div>
-  <div class="kpi-breakdown-total">319.000 + 10.000 + 51.000 = <strong>380.000</strong></div>
+  <div class="kpi-breakdown-total">319.000 + 10.000 + 49.000 = <strong>378.000</strong></div>
 </div>
 <div class="kpi"><div class="n" data-count="42940">42.940</div><div class="l">Total de defesas</div></div>
 <div class="kpi danger"><div class="n" data-count="342392">342.392</div><div class="l">Processos que decaíram</div></div>
@@ -2649,7 +2698,7 @@ tbody tr:hover{background:#F0F8FC}
         <tr><td>jun/26</td><td>65.955</td><td>12.000</td><td>77.955</td></tr>
         <tr><td>jul/26</td><td>41.761</td><td>3.332</td><td>45.093</td></tr>
         <tr><td>ago/26</td><td>47.585</td><td>11.873</td><td>59.458</td></tr>
-        <tr class="projection-row"><td>PROJ. SET/26</td><td>51.000</td><td>329.000</td><td>380.000</td></tr>
+        <tr class="projection-row"><td>PROJ. SET/26</td><td>49.000</td><td>329.000</td><td>378.000</td></tr>
       </tbody>
     </table>
   </div>
@@ -2742,11 +2791,11 @@ tbody tr:hover{background:#F0F8FC}
           <label for="resourceRate">Taxa estimada de recurso</label>
 
           <div class="rate-field">
-            <input id="resourceRate" type="text" inputmode="decimal" value="11,3" maxlength="5" aria-label="Digite a porcentagem estimada de recurso">
+            <input id="resourceRate" type="text" inputmode="decimal" value="11,36" maxlength="5" aria-label="Digite a porcentagem estimada de recurso">
             <span>%</span>
           </div>
 
-          <small>Base: 380.000 processos projetados.</small>
+          <small>Base: 378.000 processos projetados.</small>
         </div>
       </div>
     </div>
@@ -2754,12 +2803,12 @@ tbody tr:hover{background:#F0F8FC}
     <div class="demand-rate-banner">
       <div>
         <span>BASE DE PROCESSOS</span>
-        <strong>380.000</strong>
+        <strong>378.000</strong>
       </div>
       <div class="rate-arrow">×</div>
       <div>
         <span>TAXA DE RECURSO</span>
-        <strong id="rateDisplay">11,3%</strong>
+        <strong id="rateDisplay">11,36%</strong>
       </div>
       <div class="rate-arrow">=</div>
       <div class="demand-highlight">
@@ -2828,9 +2877,9 @@ tbody tr:hover{background:#F0F8FC}
     <div class="stock-item stock-main">
       <div class="stock-icon">▣</div>
       <div>
-        <strong>380.000</strong>
+        <strong>378.000</strong>
         <span>PROCESSOS PROJETADOS</span>
-        <small>51.000 cassação + 329.000 suspensão</small>
+        <small>49.000 cassação + 319.000 suspensão por pontos + 10.000 autosuspensivas</small>
       </div>
     </div>
 
@@ -2865,7 +2914,7 @@ tbody tr:hover{background:#F0F8FC}
 
 <section class="section reveal" id="conclusao">
 <div class="section-head"><div><span class="num">08</span><h2>Conclusão executiva</h2><p>Síntese para apoio à tomada de decisão.</p></div><span class="tag">mensagem principal</span></div>
-<div class="conclusion reveal"><h3>A projeção de setembro exige reforço de capacidade.</h3><p>Para setembro/26, a projeção é de 380.000 processos instaurados e 42.940 defesas, equivalente a uma taxa estimada de recurso de 11%. Com 12 julgadores e capacidade mensal de 1.400 julgamentos por pessoa, a equipe alcança 16.800 julgamentos por mês — 39% da demanda projetada. O simulador acima permite testar diferentes tamanhos de equipe e visualizar o impacto imediatamente.</p></div>
+<div class="conclusion reveal"><h3>A projeção de setembro exige reforço de capacidade.</h3><p>Para setembro/26, a projeção é de 378.000 processos instaurados e 42.940 defesas, equivalente a uma taxa estimada de recurso de 11%. Com 12 julgadores e capacidade mensal de 1.400 julgamentos por pessoa, a equipe alcança 16.800 julgamentos por mês — 39% da demanda projetada. O simulador acima permite testar diferentes tamanhos de equipe e visualizar o impacto imediatamente.</p></div>
 </section>
 </main>
 
@@ -2906,8 +2955,8 @@ window.addEventListener('scroll',()=>backTop.classList.toggle('show',window.scro
 backTop.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
 
 // ===== SIMULADOR DINÂMICO DE JULGADORES =====
-const BASE_PROCESSOS = 380000;
-let TAXA_RECURSO = 11.3;
+const BASE_PROCESSOS = 378000;
+let TAXA_RECURSO = 11.359788;
 const CAP_MENSAL_POR_JULGADOR = 1400;
 const CAP_DIARIA_POR_JULGADOR = 75;
 const DIAS_UTEIS_REFERENCIA = 22;
@@ -2940,7 +2989,7 @@ function updateSimulator(raw){
   document.getElementById('capacityMeter').style.width = Math.min(coverage,100) + '%';
   document.getElementById('topJudges').textContent = judges;
   document.getElementById('rateDisplay').textContent =
-    new Intl.NumberFormat('pt-BR', {maximumFractionDigits:1}).format(TAXA_RECURSO) + '%';
+    new Intl.NumberFormat('pt-BR', {minimumFractionDigits:0, maximumFractionDigits:2}).format(TAXA_RECURSO) + '%';
   document.getElementById('estimatedDefenses').textContent = fmtInt.format(DEMANDA_DEFESAS);
   document.getElementById('demandInline1').textContent = fmtInt.format(DEMANDA_DEFESAS);
   document.getElementById('demandInline2').textContent = fmtInt.format(DEMANDA_DEFESAS);
@@ -3001,8 +3050,8 @@ resourceRate?.addEventListener('input', e => {
 
 resourceRate?.addEventListener('blur', e => {
   if (!e.target.value) {
-    TAXA_RECURSO = 11.3;
-    e.target.value = '11,3';
+    TAXA_RECURSO = 11.359788;
+    e.target.value = '11,36';
     updateSimulator(judgeNumber.value || 12);
   }
 });
