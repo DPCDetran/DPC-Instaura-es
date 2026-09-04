@@ -1781,6 +1781,653 @@ tbody tr:hover{background:#F0F8FC}
   }
 }
 
+
+/* ===== COMPOSIÇÃO DO CARD 380 MIL ===== */
+.kpi-total-projecao{
+  min-height:190px !important;
+  padding-bottom:14px !important;
+}
+.kpi-breakdown{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  margin-top:14px;
+  padding-top:12px;
+  border-top:1px solid rgba(255,255,255,.22);
+}
+.kpi-breakdown > div{
+  padding:0 10px;
+  border-right:1px solid rgba(255,255,255,.18);
+}
+.kpi-breakdown > div:first-child{padding-left:0}
+.kpi-breakdown > div:last-child{border-right:0;padding-right:0}
+.kpi-breakdown span{
+  display:block;
+  color:#D6ECF8;
+  font-size:7.5px;
+  font-weight:800;
+  text-transform:uppercase;
+}
+.kpi-breakdown strong{
+  display:block;
+  margin-top:4px;
+  color:#fff;
+  font-size:15px;
+}
+.kpi-breakdown-total{
+  margin-top:10px;
+  color:#D7ECF7;
+  font-size:8px;
+}
+.kpi-breakdown-total strong{color:#fff}
+.kpi-breakdown-total span{opacity:.88}
+
+/* ===== CONTROLES DO SIMULADOR ===== */
+.sim-controls{
+  display:grid;
+  grid-template-columns:minmax(330px,1fr) 190px;
+  gap:22px;
+  align-items:end;
+}
+.rate-control label{
+  display:block;
+  margin-bottom:8px;
+  color:#D5ECF8;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+}
+.rate-input-wrap{
+  display:grid;
+  grid-template-columns:1fr 34px;
+  align-items:center;
+  height:48px;
+  border:1px solid rgba(255,255,255,.42);
+  border-radius:12px;
+  background:rgba(255,255,255,.13);
+  overflow:hidden;
+}
+.rate-input-wrap input{
+  width:100%;
+  height:100%;
+  padding:0 8px 0 16px;
+  border:0;
+  outline:0;
+  background:transparent;
+  color:#fff;
+  font-size:22px;
+  font-weight:900;
+  text-align:right;
+}
+.rate-input-wrap span{
+  color:#fff;
+  font-size:18px;
+  font-weight:900;
+}
+.rate-control small{
+  display:block;
+  margin-top:6px;
+  color:#CDE7F4;
+  font-size:8px;
+}
+.demand-rate-banner{
+  display:grid;
+  grid-template-columns:1fr 54px 1fr 54px 1.2fr;
+  align-items:stretch;
+  border-bottom:1px solid #DCE7EF;
+  background:#F6FAFC;
+}
+.demand-rate-banner > div:not(.rate-arrow){
+  min-height:105px;
+  padding:20px 22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.demand-rate-banner span{
+  color:#738899;
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:.8px;
+}
+.demand-rate-banner strong{
+  margin-top:5px;
+  color:#005CA8;
+  font-size:27px;
+}
+.rate-arrow{
+  display:grid;
+  place-items:center;
+  color:#78A9C8;
+  font-size:22px;
+}
+.demand-rate-banner .demand-highlight{
+  background:#EAF5FB;
+}
+.demand-rate-banner .demand-highlight strong{
+  color:#004077;
+  font-size:31px;
+}
+@media(max-width:1100px){
+  .sim-controls{grid-template-columns:1fr}
+  .rate-control{max-width:220px}
+}
+@media(max-width:700px){
+  .demand-rate-banner{grid-template-columns:1fr}
+  .rate-arrow{min-height:30px}
+  .kpi-breakdown{grid-template-columns:1fr}
+  .kpi-breakdown > div{border-right:0;padding:5px 0}
+}
+
+
+/* ===== CORREÇÃO DE LAYOUT DO SIMULADOR V9 ===== */
+.simulator-head{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) minmax(520px,650px) !important;
+  gap:30px !important;
+  overflow:hidden !important;
+}
+.sim-controls{
+  min-width:0 !important;
+  width:100% !important;
+  grid-template-columns:minmax(280px,1fr) 175px !important;
+  gap:18px !important;
+}
+.judge-control{
+  min-width:0 !important;
+  width:100% !important;
+  grid-template-columns:minmax(160px,1fr) 90px !important;
+}
+.judge-control input[type="text"]{
+  width:90px !important;
+  box-sizing:border-box !important;
+}
+.rate-control{
+  min-width:0 !important;
+  width:175px !important;
+}
+.rate-input-wrap{
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+.rate-input-wrap input{
+  min-width:0 !important;
+  box-sizing:border-box !important;
+}
+.rate-control small{
+  white-space:normal !important;
+  line-height:1.35 !important;
+}
+@media(max-width:1200px){
+  .simulator-head{
+    grid-template-columns:1fr !important;
+  }
+  .sim-controls{
+    grid-template-columns:minmax(280px,1fr) 175px !important;
+    max-width:720px !important;
+  }
+}
+@media(max-width:650px){
+  .sim-controls{
+    grid-template-columns:1fr !important;
+  }
+  .rate-control{
+    width:100% !important;
+    max-width:220px !important;
+  }
+}
+
+
+/* ===== SIMULADOR V10 — ALINHAMENTO DEFINITIVO ===== */
+#capacidade,
+#capacidade *{
+  box-sizing:border-box;
+}
+#capacidade{
+  overflow:hidden;
+}
+#capacidade .capacity-simulator{
+  width:100%;
+  max-width:100%;
+  overflow:hidden;
+}
+#capacidade .simulator-head{
+  width:100%;
+  max-width:100%;
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) 620px !important;
+  gap:28px !important;
+  padding:28px 30px !important;
+  align-items:center !important;
+  overflow:hidden !important;
+}
+#capacidade .simulator-head > div{
+  min-width:0;
+}
+#capacidade .sim-controls{
+  width:100% !important;
+  min-width:0 !important;
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) 180px !important;
+  gap:20px !important;
+  align-items:end !important;
+}
+#capacidade .judge-control{
+  width:100% !important;
+  min-width:0 !important;
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) 90px !important;
+  gap:14px !important;
+}
+#capacidade .judge-control label{
+  grid-column:1/-1 !important;
+}
+#capacidade .judge-control input[type="range"]{
+  width:100% !important;
+  min-width:0 !important;
+}
+#capacidade .judge-control input[type="text"]{
+  width:90px !important;
+  min-width:0 !important;
+}
+#capacidade .rate-control{
+  width:180px !important;
+  min-width:0 !important;
+}
+#capacidade .rate-input-wrap{
+  width:100% !important;
+  min-width:0 !important;
+}
+#capacidade .rate-input-wrap input{
+  width:100% !important;
+  min-width:0 !important;
+}
+#capacidade .demand-rate-banner,
+#capacidade .simulator-results,
+#capacidade .simulator-detail,
+#capacidade .capacity-meter-wrap{
+  width:100%;
+  max-width:100%;
+}
+#capacidade .demand-rate-banner{
+  grid-template-columns:minmax(0,1fr) 54px minmax(0,1fr) 54px minmax(0,1.15fr) !important;
+}
+@media(max-width:1250px){
+  #capacidade .simulator-head{
+    grid-template-columns:1fr !important;
+  }
+  #capacidade .sim-controls{
+    max-width:760px;
+  }
+}
+@media(max-width:720px){
+  #capacidade .sim-controls{
+    grid-template-columns:1fr !important;
+  }
+  #capacidade .rate-control{
+    width:100% !important;
+    max-width:220px;
+  }
+  #capacidade .demand-rate-banner{
+    grid-template-columns:1fr !important;
+  }
+}
+
+
+/* ==========================================================
+   SIMULADOR PROFISSIONAL V11
+   ========================================================== */
+
+#capacidade .capacity-simulator{
+  width:100%;
+  max-width:100%;
+  border:1px solid #D7E5EE;
+  border-radius:20px;
+  overflow:hidden;
+  background:#FFFFFF;
+  box-shadow:0 14px 34px rgba(0,64,119,.08);
+}
+
+/* Cabeçalho */
+#capacidade .simulator-head-pro{
+  display:grid !important;
+  grid-template-columns:minmax(300px,.82fr) minmax(610px,1.18fr) !important;
+  gap:42px !important;
+  align-items:center !important;
+
+  width:100% !important;
+  padding:30px 34px !important;
+
+  background:
+    linear-gradient(120deg,#064B7D 0%,#005CA8 60%,#0874BA 100%) !important;
+
+  overflow:visible !important;
+}
+
+#capacidade .simulator-intro{
+  min-width:0;
+}
+
+#capacidade .simulator-eyebrow{
+  display:block;
+  margin-bottom:7px;
+  color:#9FD7F0;
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:1.25px;
+  text-transform:uppercase;
+}
+
+#capacidade .simulator-intro h3{
+  margin:0 !important;
+  color:#FFFFFF;
+  font-size:22px !important;
+  line-height:1.15;
+  letter-spacing:-.35px;
+}
+
+#capacidade .simulator-intro p{
+  max-width:560px;
+  margin:9px 0 0 !important;
+  color:#D8EDF8 !important;
+  font-size:11px !important;
+  line-height:1.55 !important;
+}
+
+/* Área dos dois controles */
+#capacidade .sim-controls-pro{
+  display:grid !important;
+  grid-template-columns:minmax(330px,1fr) 190px !important;
+  gap:24px !important;
+  align-items:start !important;
+
+  width:100%;
+  min-width:0;
+}
+
+#capacidade .control-group{
+  display:grid;
+  grid-template-rows:18px 56px 18px;
+  gap:7px;
+
+  min-width:0;
+  margin:0;
+}
+
+#capacidade .control-group label{
+  display:flex;
+  align-items:center;
+
+  margin:0 !important;
+  color:#E6F4FB;
+  font-size:9px !important;
+  font-weight:900;
+  line-height:1;
+  letter-spacing:.85px;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
+#capacidade .control-group small{
+  display:block;
+  margin:0 !important;
+  color:#BFDDEB !important;
+  font-size:8px !important;
+  line-height:18px !important;
+  white-space:nowrap;
+}
+
+/* Julgadores */
+#capacidade .control-line{
+  display:grid;
+  grid-template-columns:minmax(180px,1fr) 92px;
+  gap:14px;
+  align-items:center;
+
+  width:100%;
+  min-width:0;
+  height:56px;
+}
+
+#capacidade #judgeRange{
+  display:block;
+  width:100% !important;
+  min-width:0 !important;
+  margin:0 !important;
+  cursor:pointer;
+  accent-color:#7FD3F1;
+}
+
+#capacidade .number-field{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  width:92px;
+  height:56px;
+
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:14px;
+  background:rgba(255,255,255,.13);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.08),
+    0 4px 14px rgba(0,38,72,.08);
+
+  transition:.18s ease;
+}
+
+#capacidade .number-field:focus-within{
+  border-color:#91D8F5;
+  background:#FFFFFF;
+  box-shadow:0 0 0 3px rgba(127,211,241,.20);
+}
+
+#capacidade #judgeNumber{
+  width:100% !important;
+  height:100% !important;
+  padding:0 8px !important;
+
+  border:0 !important;
+  outline:0 !important;
+  background:transparent !important;
+
+  color:#FFFFFF !important;
+  font-size:22px !important;
+  font-weight:900 !important;
+  line-height:1 !important;
+  text-align:center !important;
+}
+
+#capacidade .number-field:focus-within #judgeNumber{
+  color:#005CA8 !important;
+}
+
+/* Taxa */
+#capacidade .rate-field{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 34px;
+  align-items:center;
+
+  width:190px;
+  height:56px;
+
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:14px;
+  background:rgba(255,255,255,.13);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.08),
+    0 4px 14px rgba(0,38,72,.08);
+
+  overflow:hidden;
+  transition:.18s ease;
+}
+
+#capacidade .rate-field:focus-within{
+  border-color:#91D8F5;
+  background:#FFFFFF;
+  box-shadow:0 0 0 3px rgba(127,211,241,.20);
+}
+
+#capacidade #resourceRate{
+  display:block;
+  width:100% !important;
+  min-width:0 !important;
+  height:100% !important;
+  padding:0 4px 0 16px !important;
+
+  border:0 !important;
+  outline:0 !important;
+  background:transparent !important;
+
+  color:#FFFFFF !important;
+  font-size:22px !important;
+  font-weight:900 !important;
+  line-height:1 !important;
+  text-align:right !important;
+}
+
+#capacidade .rate-field > span{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+
+  height:100%;
+  padding-left:3px;
+
+  color:#FFFFFF;
+  font-size:19px;
+  font-weight:900;
+}
+
+#capacidade .rate-field:focus-within #resourceRate,
+#capacidade .rate-field:focus-within > span{
+  color:#005CA8 !important;
+}
+
+/* Bloco da conta: 380.000 × taxa = defesas */
+#capacidade .demand-rate-banner{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) 48px minmax(0,1fr) 48px minmax(0,1.10fr) !important;
+  align-items:stretch !important;
+
+  width:100% !important;
+  border-bottom:1px solid #DCE7EF;
+  background:#F7FAFC;
+}
+
+#capacidade .demand-rate-banner > div:not(.rate-arrow){
+  min-height:112px !important;
+  padding:22px 28px !important;
+  justify-content:center !important;
+}
+
+#capacidade .rate-arrow{
+  display:grid;
+  place-items:center;
+  min-width:0;
+  color:#77A8C7;
+  font-size:23px;
+}
+
+/* Indicadores perfeitamente alinhados */
+#capacidade .simulator-results{
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  width:100% !important;
+}
+
+#capacidade .sim-result{
+  min-height:150px !important;
+  padding:25px 28px !important;
+  justify-content:center !important;
+  align-items:flex-start !important;
+}
+
+#capacidade .sim-result > span{
+  min-height:14px;
+}
+
+#capacidade .sim-result > strong{
+  min-height:auto !important;
+  margin-top:9px !important;
+  font-size:31px !important;
+}
+
+#capacidade .sim-result > small{
+  min-height:28px;
+  margin-top:9px !important;
+}
+
+/* Cards inferiores */
+#capacidade .simulator-detail{
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:16px !important;
+  padding:22px !important;
+}
+
+#capacidade .detail-box{
+  min-height:118px !important;
+  padding:20px 22px !important;
+}
+
+/* Responsividade */
+@media(max-width:1180px){
+  #capacidade .simulator-head-pro{
+    grid-template-columns:1fr !important;
+    gap:24px !important;
+  }
+
+  #capacidade .sim-controls-pro{
+    max-width:760px;
+  }
+}
+
+@media(max-width:760px){
+  #capacidade .sim-controls-pro{
+    grid-template-columns:1fr !important;
+  }
+
+  #capacidade .rate-field{
+    width:100%;
+    max-width:190px;
+  }
+
+  #capacidade .simulator-results{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+
+  #capacidade .demand-rate-banner{
+    grid-template-columns:1fr !important;
+  }
+
+  #capacidade .rate-arrow{
+    min-height:32px;
+  }
+}
+
+@media(max-width:560px){
+  #capacidade .simulator-results,
+  #capacidade .simulator-detail{
+    grid-template-columns:1fr !important;
+  }
+
+  #capacidade .simulator-head-pro{
+    padding:24px 20px !important;
+  }
+
+  #capacidade .control-line{
+    grid-template-columns:minmax(120px,1fr) 82px;
+  }
+
+  #capacidade .number-field{
+    width:82px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1955,7 +2602,16 @@ tbody tr:hover{background:#F0F8FC}
 <section class="section reveal" id="resumo">
 <div class="section-head"><div><span class="num">03</span><h2>Resumo executivo</h2><p>Visão consolidada do estoque, decadência, fluxo de trabalho e capacidade disponível.</p></div><span class="tag">visão executiva</span></div>
 <div class="grid g4">
-<div class="kpi accent"><div class="n" data-count="380000">380.000</div><div class="l">Suspensão por pontos a instaurar</div></div>
+<div class="kpi accent kpi-total-projecao">
+  <div class="n" data-count="380000">380.000</div>
+  <div class="l">TOTAL PROJETADO DE PROCESSOS</div>
+  <div class="kpi-breakdown">
+    <div><span>Susp. por pontos</span><strong>319.000</strong></div>
+    <div><span>Autosusp.</span><strong>10.000</strong></div>
+    <div><span>Cassação</span><strong>51.000</strong></div>
+  </div>
+  <div class="kpi-breakdown-total">319.000 + 10.000 + 51.000 = <strong>380.000</strong></div>
+</div>
 <div class="kpi"><div class="n" data-count="42940">42.940</div><div class="l">Total de defesas</div></div>
 <div class="kpi danger"><div class="n" data-count="342392">342.392</div><div class="l">Processos que decaíram</div></div>
 <div class="kpi warn"><div class="n">30 dias</div><div class="l">Prazo BR informado</div></div>
@@ -2061,15 +2717,54 @@ tbody tr:hover{background:#F0F8FC}
   </div>
 
   <div class="capacity-simulator">
-    <div class="simulator-head">
-      <div>
+    <div class="simulator-head simulator-head-pro">
+      <div class="simulator-intro">
+        <span class="simulator-eyebrow">SIMULAÇÃO DE CAPACIDADE</span>
         <h3>Simulador de equipe</h3>
-        <p>Arraste a barra ou digite diretamente a quantidade de julgadores. Os indicadores abaixo são recalculados automaticamente.</p>
+        <p>Altere a quantidade de julgadores ou a taxa estimada de recurso. Todos os indicadores são recalculados automaticamente.</p>
       </div>
-      <div class="judge-control">
-        <label for="judgeRange">Quantidade de julgadores</label>
-        <input id="judgeRange" type="range" min="1" max="60" value="12" step="1">
-        <input id="judgeNumber" type="text" inputmode="numeric" pattern="[0-9]*" value="12" maxlength="3" aria-label="Digite a quantidade de julgadores">
+
+      <div class="sim-controls-pro">
+        <div class="control-group judges-group">
+          <label for="judgeNumber">Quantidade de julgadores</label>
+
+          <div class="control-line">
+            <input id="judgeRange" type="range" min="1" max="60" value="12" step="1" aria-label="Quantidade de julgadores">
+            <div class="number-field">
+              <input id="judgeNumber" type="text" inputmode="numeric" pattern="[0-9]*" value="12" maxlength="3" aria-label="Digite a quantidade de julgadores">
+            </div>
+          </div>
+
+          <small>Arraste o controle ou digite o número.</small>
+        </div>
+
+        <div class="control-group rate-group">
+          <label for="resourceRate">Taxa estimada de recurso</label>
+
+          <div class="rate-field">
+            <input id="resourceRate" type="text" inputmode="decimal" value="11,3" maxlength="5" aria-label="Digite a porcentagem estimada de recurso">
+            <span>%</span>
+          </div>
+
+          <small>Base: 380.000 processos projetados.</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="demand-rate-banner">
+      <div>
+        <span>BASE DE PROCESSOS</span>
+        <strong>380.000</strong>
+      </div>
+      <div class="rate-arrow">×</div>
+      <div>
+        <span>TAXA DE RECURSO</span>
+        <strong id="rateDisplay">11,3%</strong>
+      </div>
+      <div class="rate-arrow">=</div>
+      <div class="demand-highlight">
+        <span>DEFESAS ESTIMADAS</span>
+        <strong id="estimatedDefenses">42.940</strong>
       </div>
     </div>
 
@@ -2082,7 +2777,7 @@ tbody tr:hover{background:#F0F8FC}
       <div class="sim-result">
         <span>DEFESAS POR JULGADOR</span>
         <strong id="perJudge">3.578</strong>
-        <small>42.940 ÷ quantidade de julgadores</small>
+        <small><span id="demandInline1">42.940</span> ÷ quantidade de julgadores</small>
       </div>
       <div class="sim-result">
         <span>MESES PARA ESCOAR</span>
@@ -2092,7 +2787,7 @@ tbody tr:hover{background:#F0F8FC}
       <div class="sim-result">
         <span>COBERTURA EM 1 MÊS</span>
         <strong id="coveragePct">39%</strong>
-        <small>capacidade mensal ÷ 42.940 defesas</small>
+        <small>capacidade mensal ÷ <span id="demandInline2">42.940</span> defesas</small>
       </div>
     </div>
 
@@ -2105,8 +2800,8 @@ tbody tr:hover{background:#F0F8FC}
       
       <div class="detail-box">
         <span>JULGADORES PARA ZERAR EM 1 MÊS</span>
-        <strong>31</strong>
-        <small>42.940 ÷ 1.400 ≈ 31 julgadores.</small>
+        <strong id="judgesNeeded">31</strong>
+        <small><span id="demandInline3">42.940</span> ÷ 1.400, arredondado para cima.</small>
       </div>
     </div>
 
@@ -2211,7 +2906,8 @@ window.addEventListener('scroll',()=>backTop.classList.toggle('show',window.scro
 backTop.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
 
 // ===== SIMULADOR DINÂMICO DE JULGADORES =====
-const DEMANDA_DEFESAS = 42940;
+const BASE_PROCESSOS = 380000;
+let TAXA_RECURSO = 11.3;
 const CAP_MENSAL_POR_JULGADOR = 1400;
 const CAP_DIARIA_POR_JULGADOR = 75;
 const DIAS_UTEIS_REFERENCIA = 22;
@@ -2227,11 +2923,13 @@ function updateSimulator(raw){
   judgeRange.value = Math.min(judges, 60);
   if (document.activeElement !== judgeNumber) judgeNumber.value = judges;
 
+  const DEMANDA_DEFESAS = Math.round(BASE_PROCESSOS * (TAXA_RECURSO / 100));
   const monthlyTeam = CAP_MENSAL_POR_JULGADOR * judges;
   const perJudge = DEMANDA_DEFESAS / judges;
   const months = DEMANDA_DEFESAS / monthlyTeam;
-  const coverage = (monthlyTeam / DEMANDA_DEFESAS) * 100;
+  const coverage = DEMANDA_DEFESAS > 0 ? (monthlyTeam / DEMANDA_DEFESAS) * 100 : 100;
   const requiredDaily = DEMANDA_DEFESAS / judges / DIAS_UTEIS_REFERENCIA;
+  const judgesNeeded = Math.ceil(DEMANDA_DEFESAS / CAP_MENSAL_POR_JULGADOR);
 
   document.getElementById('monthlyTeam').textContent = fmtInt.format(monthlyTeam);
   document.getElementById('perJudge').textContent = fmtInt.format(perJudge);
@@ -2241,6 +2939,13 @@ function updateSimulator(raw){
   document.getElementById('meterLabel').textContent = fmt1pct.format(coverage) + '%';
   document.getElementById('capacityMeter').style.width = Math.min(coverage,100) + '%';
   document.getElementById('topJudges').textContent = judges;
+  document.getElementById('rateDisplay').textContent =
+    new Intl.NumberFormat('pt-BR', {maximumFractionDigits:1}).format(TAXA_RECURSO) + '%';
+  document.getElementById('estimatedDefenses').textContent = fmtInt.format(DEMANDA_DEFESAS);
+  document.getElementById('demandInline1').textContent = fmtInt.format(DEMANDA_DEFESAS);
+  document.getElementById('demandInline2').textContent = fmtInt.format(DEMANDA_DEFESAS);
+  document.getElementById('demandInline3').textContent = fmtInt.format(DEMANDA_DEFESAS);
+  document.getElementById('judgesNeeded').textContent = fmtInt.format(judgesNeeded);
 
   const status = coverage >= 100
     ? `A equipe cobre 100% da demanda projetada em até um mês.`
@@ -2256,21 +2961,53 @@ judgeRange?.addEventListener('input', e => {
 });
 
 judgeNumber?.addEventListener('input', e => {
-  // Permite apagar o conteúdo para digitar um novo número normalmente.
   const clean = e.target.value.replace(/\D/g, '').slice(0, 3);
   e.target.value = clean;
+
   if (clean !== '') {
     updateSimulator(clean);
-    // mantém exatamente o que foi digitado visível no campo
     judgeNumber.value = clean;
   }
 });
 
 judgeNumber?.addEventListener('blur', e => {
-  if (!e.target.value) updateSimulator(12);
+  if (!e.target.value) {
+    updateSimulator(12);
+  }
 });
 
 judgeNumber?.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    e.target.blur();
+  }
+});
+
+const resourceRate = document.getElementById('resourceRate');
+
+resourceRate?.addEventListener('input', e => {
+  let visual = e.target.value.replace(/[^0-9,.]/g, '');
+  visual = visual.replace('.', ',');
+  const parts = visual.split(',');
+  if (parts.length > 2) visual = parts[0] + ',' + parts.slice(1).join('');
+  e.target.value = visual;
+
+  const value = parseFloat(visual.replace(',', '.'));
+  if (!Number.isNaN(value) && value >= 0 && value <= 100) {
+    TAXA_RECURSO = value;
+    updateSimulator(judgeNumber.value || 12);
+    resourceRate.value = visual;
+  }
+});
+
+resourceRate?.addEventListener('blur', e => {
+  if (!e.target.value) {
+    TAXA_RECURSO = 11.3;
+    e.target.value = '11,3';
+    updateSimulator(judgeNumber.value || 12);
+  }
+});
+
+resourceRate?.addEventListener('keydown', e => {
   if (e.key === 'Enter') {
     e.target.blur();
   }
