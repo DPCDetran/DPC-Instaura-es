@@ -2477,6 +2477,14 @@ tbody tr:hover{background:#F0F8FC}
   }
 }
 
+
+/* ===== DESTAQUE DAS ALTERNATIVAS - CORREIOS ===== */
+.option-risk{background:#FFF3F3 !important;border-color:#E8B8B8 !important;border-left:5px solid #C83D3D !important;}
+.option-risk h3{color:#9F3030 !important;}
+.option-recommended{background:#EFFAF4 !important;border-color:#B8DDC9 !important;border-left:5px solid #31845D !important;box-shadow:0 10px 24px rgba(49,132,93,.10) !important;}
+.option-recommended h3{color:#226A49 !important;}
+.option-badge{display:inline-block;margin-bottom:10px;padding:5px 9px;border-radius:999px;background:#DDF3E7;color:#226A49;font-size:8px;font-weight:900;letter-spacing:.7px;text-transform:uppercase;}
+
 </style>
 </head>
 <body>
@@ -2505,9 +2513,9 @@ tbody tr:hover{background:#F0F8FC}
   <div class="section-head"><div><span class="num">01</span><h2>Correios — inconsistência na produção dos lotes</h2><p>Alternativas para tratamento dos lotes e impactos operacionais associados.</p></div><span class="tag">Correios</span></div>
   <div class="banner reveal"><strong>Cenário:</strong> foram apresentadas três possibilidades para tratamento da inconsistência: reenvio, errata ou reprocessamento.</div>
   <div class="grid g3" style="margin-top:18px">
-    <div class="card reveal"><h3>1ª opção · Reenvio</h3><p>Reenvio dos lotes já recebidos pelos Correios. Não é necessário enviar novo arquivo, pois os Correios conseguem produzir com o último arquivo enviado.</p><p><strong>Ponto de atenção:</strong> possibilidade de inserir frase de esclarecimento na Matriz, em alteração temporária, sem alteração dos dados variáveis, como os prazos.</p></div>
-    <div class="card reveal"><h3>2ª opção · Errata</h3><p>Criação de modelo de carta para errata, mantendo a mesma chancela e o formato e-carta transmissão.</p><p>Será necessário gerar arquivo com todos os destinatários ou, alternativamente, somente com os destinatários que realizaram reclamação.</p></div>
-    <div class="card reveal"><h3>3ª opção · Reprocessamento</h3><p>O DETRAN deverá providenciar novo arquivo em razão da mudança dos dados variáveis.</p><p><strong>Impacto:</strong> esta alternativa exige avaliação dos efeitos sobre revelia, prazo de processamento e situações em que já houve manifestação do condutor.</p></div>
+    <div class="card reveal option-risk"><h3>1ª opção · Reenvio</h3><p>Reenvio dos lotes já recebidos pelos Correios. Não é necessário enviar novo arquivo, pois os Correios conseguem produzir com o último arquivo enviado.</p><p><strong>Ponto de atenção:</strong> possibilidade de inserir frase de esclarecimento na Matriz, em alteração temporária, sem alteração dos dados variáveis, como os prazos.</p></div>
+    <div class="card reveal option-recommended"><span class="option-badge">Opção indicada</span><h3>2ª opção · Errata</h3><p>Criação de modelo de carta para errata, mantendo a mesma chancela e o formato e-carta transmissão.</p><p>Será necessário gerar arquivo com todos os destinatários ou, alternativamente, somente com os destinatários que realizaram reclamação.</p></div>
+    <div class="card reveal option-risk"><h3>3ª opção · Reprocessamento</h3><p>O DETRAN deverá providenciar novo arquivo em razão da mudança dos dados variáveis. Esta alternativa exige avaliação dos efeitos sobre revelia, prazo de processamento e situações em que já houve manifestação do condutor.</p></div>
   </div>
   <div class="grid g3" style="margin-top:18px">
     <div class="kpi danger reveal"><div class="n">493.754</div><div class="l">Objetos relacionados ao lote 102</div></div>
@@ -2527,7 +2535,7 @@ tbody tr:hover{background:#F0F8FC}
     <article class="tl-card reveal"><div class="tl-marker yellow"></div><div class="tl-content"><div class="tl-top"><span class="tl-date">140.00431454/2026-81</span><span class="tl-tag fix">AETA</span></div><h3>Alegação de ausência de apreciação de recurso</h3><p>Requerente alega ausência de apreciação tempestiva do recurso administrativo, embora conste evidência de julgamento pela JARI. Referência: REVEL DETRAN.</p></div></article>
     <article class="tl-card reveal"><div class="tl-marker green"></div><div class="tl-content"><div class="tl-top"><span class="tl-date">140.00439682/2026-07</span><span class="tl-tag resolved">AETA</span></div><h3>Violência física contra examinador em exame prático</h3><p>O caso já havia sido recebido e o processo administrativo instaurado. Foi elaborado despacho informando a instauração, havendo despacho para assinatura da Talita em concordância com a manifestação.</p></div></article>
     <article class="tl-card reveal"><div class="tl-marker red"></div><div class="tl-content"><div class="tl-top"><span class="tl-date">140.00442243/2026-73</span><span class="tl-tag alert">AETA</span></div><h3>Ofício SENATRAN — indícios de fraude</h3><p>Solicitação de apuração de possível utilização indevida de dados pessoais e habilitação, com análise de imagens e registros biométricos das emissões de CNH, apuração dos fatos e adoção de eventuais medidas protetivas no prontuário.</p></div></article>
-    <article class="tl-card reveal"><div class="tl-marker green"></div><div class="tl-content"><div class="tl-top"><span class="tl-date">140.00233127/2026-65</span><span class="tl-tag resolved">MP · DHC</span></div><h3>Acordo de Não Persecução Penal — ANPP</h3><p>Dois cidadãos reconheceram irregularidade na obtenção da categoria B. O acordo estabeleceu a retirada da categoria irregular, permanecendo a categoria A; após os trâmites internos, foram emitidos os documentos de habilitação na categoria A.</p></div></article>
+    <article class="tl-card reveal"><div class="tl-marker green"></div><div class="tl-content"><div class="tl-top"><span class="tl-date">140.00233127/2026-65</span><span class="tl-tag resolved">MP</span></div><h3>Acordo de Não Persecução Penal — ANPP</h3><p>Dois cidadãos reconheceram irregularidade na obtenção da categoria B. O acordo estabeleceu a retirada da categoria irregular, permanecendo a categoria A; após os trâmites internos, foram emitidos os documentos de habilitação na categoria A.</p></div></article>
   </div>
 </section>
 
@@ -2536,7 +2544,7 @@ tbody tr:hover{background:#F0F8FC}
   <div class="grid g3">
     <div class="kpi accent reveal"><div class="n">10</div><div class="l">Recursos disponíveis</div></div>
     <div class="card reveal"><h3>Numeração e data</h3><p>A numeração da decisão e a data são automáticas e sequenciais, considerando a data de criação do documento.</p></div>
-    <div class="card reveal"><h3>Assinaturas necessárias</h3><p>É necessária a assinatura da decisão e do extrato, no formato estudado com o DEIVID, para viabilizar a publicação.</p></div>
+    <div class="card reveal"><h3>Assinaturas necessárias</h3><p>Necessária assinatura da decisão e do extrato que está no formato em que o Ricardo estudou com o Deivid a viabilidade.</p></div>
   </div>
 </section>
 
@@ -2545,7 +2553,7 @@ tbody tr:hover{background:#F0F8FC}
   <div class="grid g2">
     <div class="kpi accent reveal"><div class="n">32</div><div class="l">Média de processos SEI recebidos por semana</div></div>
   </div>
-  <div class="banner reveal"><strong>Fluxo:</strong> decisões em que o DETRAN não figura como parte são encaminhadas pela AEDJ para cumprimento pela área competente.</div>
+  <div class="alert reveal"><strong>Ponto de atenção:</strong> decisões em que o DETRAN não figura como parte são encaminhadas pela AEDJ para cumprimento pela área competente, em desacordo com as competências da AEDJ previstas na Portaria Normativa 44.</div>
 </section>
 
 <section class="section reveal" id="mineirinhos">
@@ -2553,7 +2561,7 @@ tbody tr:hover{background:#F0F8FC}
   <div class="grid g3">
     <div class="card reveal"><h3>Processo SEI</h3><p><strong style="color:#005CA8;font-size:18px">140.00334100/2026-99</strong></p></div>
     <div class="card reveal"><h3>Status</h3><p>Nota técnica validada pela Coordenadoria.</p></div>
-    <div class="card reveal"><h3>Próximo passo</h3><p>Aguardando autorização para prosseguimento dos trâmites e envio para a DCI.</p></div>
+    <div class="card reveal"><h3>Próximo passo</h3><p>Aguardando autorização da DHC para prosseguimento dos trâmites e envio para a DCI.</p></div>
   </div>
   <div class="conclusion reveal" style="margin-top:20px"><h3>Síntese executiva</h3><p>O tema encontra-se tecnicamente validado e depende de autorização para continuidade do fluxo administrativo e encaminhamento à DCI.</p></div>
 </section>
