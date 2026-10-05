@@ -2485,6 +2485,19 @@ tbody tr:hover{background:#F0F8FC}
 .option-recommended h3{color:#226A49 !important;}
 .option-badge{display:inline-block;margin-bottom:10px;padding:5px 9px;border-radius:999px;background:#DDF3E7;color:#226A49;font-size:8px;font-weight:900;letter-spacing:.7px;text-transform:uppercase;}
 
+
+/* ===== TEMA 07 · PRESSÃO SOBRE A CAPACIDADE DE JULGAMENTO ===== */
+.judge-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}
+.judge-metric{padding:18px 20px;border:1px solid var(--borda);border-radius:15px;background:#F8FBFD}
+.judge-metric span{display:block;color:#748A9A;font-size:8.5px;font-weight:900;letter-spacing:.8px;text-transform:uppercase}
+.judge-metric strong{display:block;margin-top:6px;color:#005CA8;font-size:29px;line-height:1}
+.judge-metric small{display:block;margin-top:6px;color:#758A99;font-size:9.5px;line-height:1.4}
+.judge-chart{margin-top:20px;padding:24px 24px 18px;border:1px solid #D8E6EF;border-radius:18px;background:linear-gradient(180deg,#FBFDFE,#F4F9FC)}
+.judge-chart-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin-bottom:20px}
+.judge-chart-head h3{margin:0;color:#073F69;font-size:17px}.judge-chart-head p{margin:5px 0 0;color:#718697;font-size:10.5px}
+.judge-chart-svg{width:100%;height:auto;display:block;overflow:visible}.judge-chart-svg text{font-family:"Segoe UI",Arial,sans-serif}.judge-gridline{stroke:#DCE7EF;stroke-width:1}.judge-axis-label{fill:#718697;font-size:10px;font-weight:700}.judge-line{fill:none;stroke:#005CA8;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}.judge-area{fill:url(#judgeGradient)}.judge-dot{fill:#fff;stroke:#005CA8;stroke-width:3}.judge-dot-last{fill:#C83D3D;stroke:#fff;stroke-width:3}.judge-value{fill:#064B7D;font-size:10px;font-weight:900}.judge-value-last{fill:#C83D3D;font-size:12px;font-weight:900}
+@media(max-width:850px){.judge-summary{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.judge-summary{grid-template-columns:1fr}.judge-chart{padding:18px 12px}.judge-chart-head{display:block}}
+
 </style>
 </head>
 <body>
@@ -2506,6 +2519,7 @@ tbody tr:hover{background:#F0F8FC}
     <a href="#decisoes">04 · Decisões AEDJ</a>
     <a href="#mineirinhos">05 · Automação Mineirinhos</a>
     <a href="#judiciais">06 · Demandas Judiciais</a>
+    <a href="#julgamentos">07 · Capacidade de Julgamento</a>
   </nav>
 </header>
 
@@ -2563,6 +2577,42 @@ tbody tr:hover{background:#F0F8FC}
   </div>
   <div class="banner reveal"><strong>Total no mês de setembro: 301 demandas judiciais.</strong> Os quantitativos evidenciam a concentração das respostas em equipes reduzidas, com compartilhamento dos mesmos quatro funcionários entre as demandas de cassação e suspensão.</div>
 </section>
+
+<section class="section reveal" id="julgamentos">
+  <div class="section-head"><div><span class="num">07</span><h2>Reflexos das instaurações de processos por pontos pressionando a capacidade de julgamento diária</h2><p>Evolução do volume diário frente à capacidade atual da equipe de julgamento.</p></div><span class="tag">Capacidade de julgamento</span></div>
+  <div class="judge-summary">
+    <div class="judge-metric reveal"><span>Julgadores</span><strong>12</strong><small>Equipe atualmente disponível para julgamento.</small></div>
+    <div class="judge-metric reveal"><span>Teletrabalho</span><strong>75</strong><small>Defesas por julgador/dia, em 4 dias da semana.</small></div>
+    <div class="judge-metric reveal"><span>Presencial</span><strong>50</strong><small>Defesas por julgador/dia, em 1 dia da semana.</small></div>
+    <div class="judge-metric reveal"><span>Maior volume</span><strong>1.409</strong><small>Registros em 05/10.</small></div>
+  </div>
+  <div class="banner reveal"><strong>Cenário atual:</strong> contamos com 12 julgadores, julgando 75 defesas nos dias de teletrabalho, em quatro dias da semana, e 50 defesas no dia presencial.</div>
+  <div class="judge-chart reveal">
+    <div class="judge-chart-head"><div><h3>Evolução diária das instaurações / pressão sobre o julgamento</h3><p>Série única com todas as datas informadas, de 21/09 a 05/10.</p></div><span class="tag">Evolução diária</span></div>
+    <svg class="judge-chart-svg" viewBox="0 0 1120 430" role="img" aria-label="Gráfico de evolução diária de 578 em 21 de setembro para 1409 em 5 de outubro">
+      <defs><linearGradient id="judgeGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3490CE" stop-opacity=".28"/><stop offset="100%" stop-color="#3490CE" stop-opacity=".02"/></linearGradient></defs>
+      <line class="judge-gridline" x1="70" y1="350" x2="1080" y2="350"/><line class="judge-gridline" x1="70" y1="275" x2="1080" y2="275"/><line class="judge-gridline" x1="70" y1="200" x2="1080" y2="200"/><line class="judge-gridline" x1="70" y1="125" x2="1080" y2="125"/><line class="judge-gridline" x1="70" y1="50" x2="1080" y2="50"/>
+      <text class="judge-axis-label" x="54" y="354" text-anchor="end">0</text><text class="judge-axis-label" x="54" y="279" text-anchor="end">400</text><text class="judge-axis-label" x="54" y="204" text-anchor="end">800</text><text class="judge-axis-label" x="54" y="129" text-anchor="end">1.200</text><text class="judge-axis-label" x="54" y="54" text-anchor="end">1.600</text>
+      <path class="judge-area" d="M85 241.6 L183 265.1 L281 257.8 L379 240.9 L477 219.1 L575 216.7 L673 239.6 L771 199.4 L869 193.4 L967 167.6 L1065 85.8 L1065 350 L85 350 Z"/>
+      <path class="judge-line" d="M85 241.6 L183 265.1 L281 257.8 L379 240.9 L477 219.1 L575 216.7 L673 239.6 L771 199.4 L869 193.4 L967 167.6 L1065 85.8"/>
+      <g>
+        <circle class="judge-dot" cx="85" cy="241.6" r="6"/><text class="judge-value" x="85" y="225" text-anchor="middle">578</text><text class="judge-axis-label" x="85" y="380" text-anchor="middle">21/09</text>
+        <circle class="judge-dot" cx="183" cy="265.1" r="6"/><text class="judge-value" x="183" y="248" text-anchor="middle">453</text><text class="judge-axis-label" x="183" y="380" text-anchor="middle">22/09</text>
+        <circle class="judge-dot" cx="281" cy="257.8" r="6"/><text class="judge-value" x="281" y="241" text-anchor="middle">492</text><text class="judge-axis-label" x="281" y="380" text-anchor="middle">23/09</text>
+        <circle class="judge-dot" cx="379" cy="240.9" r="6"/><text class="judge-value" x="379" y="224" text-anchor="middle">582</text><text class="judge-axis-label" x="379" y="380" text-anchor="middle">24/09</text>
+        <circle class="judge-dot" cx="477" cy="219.1" r="6"/><text class="judge-value" x="477" y="202" text-anchor="middle">698</text><text class="judge-axis-label" x="477" y="380" text-anchor="middle">25/09</text>
+        <circle class="judge-dot" cx="575" cy="216.7" r="6"/><text class="judge-value" x="575" y="200" text-anchor="middle">711</text><text class="judge-axis-label" x="575" y="380" text-anchor="middle">28/09</text>
+        <circle class="judge-dot" cx="673" cy="239.6" r="6"/><text class="judge-value" x="673" y="223" text-anchor="middle">589</text><text class="judge-axis-label" x="673" y="380" text-anchor="middle">29/09</text>
+        <circle class="judge-dot" cx="771" cy="199.4" r="6"/><text class="judge-value" x="771" y="182" text-anchor="middle">803</text><text class="judge-axis-label" x="771" y="380" text-anchor="middle">30/09</text>
+        <circle class="judge-dot" cx="869" cy="193.4" r="6"/><text class="judge-value" x="869" y="176" text-anchor="middle">835</text><text class="judge-axis-label" x="869" y="380" text-anchor="middle">01/10</text>
+        <circle class="judge-dot" cx="967" cy="167.6" r="6"/><text class="judge-value" x="967" y="150" text-anchor="middle">973</text><text class="judge-axis-label" x="967" y="380" text-anchor="middle">02/10</text>
+        <circle class="judge-dot-last" cx="1065" cy="85.8" r="8"/><text class="judge-value-last" x="1065" y="65" text-anchor="middle">1.409</text><text class="judge-axis-label" x="1065" y="380" text-anchor="middle">05/10</text>
+      </g>
+    </svg>
+  </div>
+  <div class="alert reveal"><strong>Ponto de atenção:</strong> a trajetória apresentada evidencia aumento do volume ao longo do período, alcançando 1.409 em 05/10, pressionando a capacidade diária de julgamento da equipe disponível.</div>
+</section>
+
 </main>
 
 <footer class="footer">
