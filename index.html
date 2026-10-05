@@ -2487,7 +2487,7 @@ tbody tr:hover{background:#F0F8FC}
 
 
 /* ===== TEMA 07 · PRESSÃO SOBRE A CAPACIDADE DE JULGAMENTO ===== */
-.judge-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}
+.judge-summary{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-bottom:20px}
 .judge-metric{padding:18px 20px;border:1px solid var(--borda);border-radius:15px;background:#F8FBFD}
 .judge-metric span{display:block;color:#748A9A;font-size:8.5px;font-weight:900;letter-spacing:.8px;text-transform:uppercase}
 .judge-metric strong{display:block;margin-top:6px;color:#005CA8;font-size:29px;line-height:1}
@@ -2498,6 +2498,11 @@ tbody tr:hover{background:#F0F8FC}
 .judge-chart-svg{width:100%;height:auto;display:block;overflow:visible}.judge-chart-svg text{font-family:"Segoe UI",Arial,sans-serif}.judge-gridline{stroke:#DCE7EF;stroke-width:1}.judge-axis-label{fill:#718697;font-size:10px;font-weight:700}.judge-line{fill:none;stroke:#005CA8;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}.judge-area{fill:url(#judgeGradient)}.judge-dot{fill:#fff;stroke:#005CA8;stroke-width:3}.judge-dot-last{fill:#C83D3D;stroke:#fff;stroke-width:3}.judge-value{fill:#064B7D;font-size:10px;font-weight:900}.judge-value-last{fill:#C83D3D;font-size:12px;font-weight:900}
 @media(max-width:850px){.judge-summary{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.judge-summary{grid-template-columns:1fr}.judge-chart{padding:18px 12px}.judge-chart-head{display:block}}
 
+
+/* Ajuste visual Tema 07: cinco indicadores na mesma linha */
+@media(max-width:1100px){.judge-summary{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.judge-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.judge-summary{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
